@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quentin Chapuis | Portfolio SISR</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        .page-content { display: none; padding: 50px 10%; min-height: 80vh; }
+        .active-page { display: block; }
+        .fade-in { animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        h2 { text-align:center; margin-bottom:40px; }
+        .skill-card { 
+            max-width:900px; 
+            margin:40px auto; 
+            padding:25px; 
+            border-radius:12px; 
+        }
+        .veille-img {
+            width:70%;
+            display:block;
+            margin:0 auto 25px auto;
+            border-radius:12px;
+        }
+        p { margin-bottom:15px; }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">QUENTIN<span>_SISR</span></div>
+        <ul>
+            <li><a href="#" onclick="showPage('accueil')" id="link-accueil" class="nav-link active">Accueil</a></li>
+            <li><a href="#" onclick="showPage('cv')" id="link-cv" class="nav-link">CV</a></li>
+            <li><a href="#" onclick="showPage('veille')" id="link-veille" class="nav-link">Veille</a></li>
+            <li><a href="#" onclick="showPage('parcours')" id="link-parcours" class="nav-link">Parcours</a></li>
+            <li><a href="#" onclick="showPage('grille')" id="link-grille" class="nav-link">Grille d'évaluation</a></li>
+            <li><a href="#" onclick="showPage('projets')" id="link-projets" class="nav-link">Projets</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="main-content">
+
+    <!-- ACCUEIL -->
+    <section id="accueil" class="page-content active-page fade-in">
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Bonjour, je suis <span class="highlight">Quentin Chapuis</span></h1>
+
+                <p>
+                    Étudiant au <strong>CFAI</strong> en <strong>BTS SIO option SISR</strong>, je me forme aux métiers 
+                    de l’administration système, du réseau et de la cybersécurité. J’aime comprendre, optimiser et 
+                    sécuriser les environnements techniques, et je développe mes compétences à travers des projets 
+                    concrets et des environnements professionnels réels.
+                </p>
+
+                <p>
+                    Je suis actuellement en alternance chez <strong>Focal JMLab</strong>, une entreprise française 
+                    fondée en 1979 et reconnue mondialement comme l’un des leaders de l’acoustique haut de gamme. 
+                    Focal conçoit et fabrique des enceintes haute‑fidélité, des casques audio premium, des systèmes 
+                    automobiles et des solutions professionnelles destinées aux studios d’enregistrement.
+                </p>
+
+                <p>
+                    L’entreprise se distingue par son savoir‑faire industriel, ses innovations technologiques 
+                    (membranes exclusives, matériaux composites, procédés de précision) et sa fabrication 
+                    majoritairement française. Travailler chez Focal JMLab me permet d’évoluer dans un environnement 
+                    où l’exigence, la qualité et l’innovation sont au cœur de chaque projet.
+                </p>
+
+                <p>
+                    J’y participe à la gestion et à la sécurisation des infrastructures informatiques, ce qui me 
+                    permet de développer mes compétences techniques tout en contribuant au fonctionnement d’une 
+                    entreprise de renommée internationale.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv" class="page-content fade-in">
+        <h2>Mon CV</h2>
+
+        <div class="skill-card" style="text-align:center;">
+            <h3>Curriculum Vitae</h3>
+            <p>Mon CV est disponible dans le dossier du site.</p>
+        </div>
+    </section>
+
+    <!-- VEILLE TECHNOLOGIQUE -->
+    <section id="veille" class="page-content fade-in">
+        <h2>Veille Technologique</h2>
+
+        <!-- INTRO -->
+        <div class="skill-card">
+            <h3>Introduction</h3>
+            <p>
+                Dans le cadre de mon BTS SIO SISR, j’ai mis en place une veille technologique afin de suivre 
+                l’évolution des technologies, des menaces et des infrastructures modernes.
+            </p>
+            <p>J’ai choisi deux thématiques essentielles :</p>
+            <ul>
+                <li><strong>Nouvelles menaces et vulnérabilités</strong></li>
+                <li><strong>Cloud computing (AWS, Azure, Google Cloud)</strong></li>
+            </ul>
+        </div>
+
+        <!-- VEILLE 1 -->
+        <div class="skill-card">
+            <img src="image/menaces-cybernetiques-2024-evolution-defis.jpg" class="veille-img" alt="Cybersécurité">
+
+            <h3>Veille 1 — Nouvelles menaces et vulnérabilités</h3>
+
+            <h4>Pourquoi ce sujet ?</h4>
+            <p>
+                La cybersécurité évolue très rapidement : nouvelles attaques, failles critiques, exploitation 
+                de l’IA par les cybercriminels… Ce sujet est essentiel pour comprendre les risques actuels.
+            </p>
+
+            <h4>Tendances actuelles</h4>
+            <ul>
+                <li>Ransomware nouvelle génération</li>
+                <li>Attaques supply chain</li>
+                <li>Exploitation de l’IA</li>
+                <li>Zero‑Day</li>
+            </ul>
+
+            <h4>Vulnérabilités fréquentes</h4>
+            <ul>
+                <li>Mauvaises configurations</li>
+                <li>Interfaces d’administration exposées</li>
+                <li>Clés API dans le code</li>
+                <li>Conteneurs mal isolés</li>
+                <li>Bases de données publiques</li>
+            </ul>
+
+            <h4>Bonnes pratiques</h4>
+            <ul>
+                <li>Mises à jour régulières</li>
+                <li>MFA obligatoire</li>
+                <li>Segmentation réseau</li>
+                <li>Sauvegardes hors ligne</li>
+                <li>Analyse des journaux</li>
+            </ul>
+        </div>
+
+        <!-- VEILLE 2 -->
+        <div class="skill-card">
+            <img src="image/veille_cloud.jpg" class="veille-img" alt="Cloud Computing">
+
+            <h3>Veille 2 — Cloud Computing (AWS, Azure, Google Cloud)</h3>
+
+            <h4>Pourquoi ce sujet ?</h4>
+            <p>
+                Le cloud est devenu incontournable dans les entreprises. AWS, Azure et Google Cloud sont au 
+                cœur des infrastructures modernes.
+            </p>
+
+            <h4>Tendances du cloud</h4>
+            <ul>
+                <li>Croissance du cloud public</li>
+                <li>Multi‑cloud et hybride</li>
+                <li>Explosion de l’IA</li>
+            </ul>
+
+            <h4>Comparatif des fournisseurs</h4>
+            <ul>
+                <li>AWS : EC2, S3, Lambda</li>
+                <li>Azure : VM, Azure AD, SQL Database</li>
+                <li>Google Cloud : GKE, BigQuery</li>
+            </ul>
+
+            <h4>Enjeux de sécurité</h4>
+            <ul>
+                <li>Mauvaises configurations</li>
+                <li>Rôles IAM trop permissifs</li>
+                <li>Buckets publics</li>
+                <li>Clés API non protégées</li>
+                <li>Logs non activés</li>
+            </ul>
+
+            <h4>Bonnes pratiques cloud</h4>
+            <ul>
+                <li>Chiffrement systématique</li>
+                <li>MFA obligatoire</li>
+                <li>Infrastructure as Code</li>
+                <li>Surveillance continue</li>
+                <li>Segmentation réseau</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!-- PARCOURS -->
+    <section id="parcours" class="page-content fade-in">
+        <h2>Mon Parcours</h2>
+
+        <div class="skill-card">
+            <h3>BTS SIO SISR</h3>
+            <p>2024 - Présent | Formation technique réseaux.</p>
+        </div>
+    </section>
+
+    <!-- GRILLE D'ÉVALUATION -->
+    <section id="grille" class="page-content fade-in">
+        <h2>Grille d'évaluation</h2>
+
+        <div class="skill-card" style="text-align:center;">
+            <h3>Document PDF</h3>
+            <p>Ma grille d'évaluation est disponible dans le dossier du site.</p>
+        </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section id="projets" class="page-content fade-in">
+        <h2>Mes Réalisations</h2>
+
+        <!-- SCRIPT POWERSHELL + INTUNE -->
+        <div class="skill-card">
+            <h3>Script PowerShell — Blocage du Microsoft Store</h3>
+            <p>
+                J’ai développé un script PowerShell permettant de <strong>bloquer l’accès au Microsoft Store</strong> 
+                pour l’ensemble de l’entreprise.  
+                Le script modifie la valeur d’une <strong>clé de registre Windows</strong> afin de désactiver 
+                complètement le Store sur tous les postes concernés.
+            </p>
+
+            <p>
+                Après validation, j’ai déployé ce script à grande échelle via 
+                <strong>Microsoft Intune</strong>, en utilisant les stratégies de déploiement automatisées.  
+                Cela a permis une application uniforme, rapide et sécurisée sur l’ensemble du parc informatique.
+            </p>
+
+            <p>
+                Ce projet m’a permis de travailler sur :  
+                — l’automatisation PowerShell  
+                — la gestion de stratégies de sécurité  
+                — le déploiement à distance via Intune  
+                — la standardisation des postes utilisateurs
+            </p>
+        </div>
+
+        <!-- ACTIVE DIRECTORY -->
+        <div class="skill-card">
+            <h3>Active Directory</h3>
+            <p>
+                Gestion des utilisateurs, des groupes et des droits d’accès.  
+                Création de comptes, organisation des OU, et application de règles de sécurité.
+            </p>
+        </div>
+
+        <!-- ROUTAGE CISCO -->
+        <div class="skill-card">
+            <h3>Routage Cisco</h3>
+            <p>
+                Configuration de routeurs et de switches, mise en place de VLANs, routage statique 
+                et segmentation réseau pour améliorer la sécurité et les performances.
+            </p>
+        </div>
+
+    </section>
+
+</main>
+
+<footer><p>&copy; 2026 - Quentin Chapuis</p></footer>
+
+<script>
+    function showPage(pageId) {
+        const pages = document.querySelectorAll('.page-content');
+        pages.forEach(page => page.classList.remove('active-page'));
+
+        document.getElementById(pageId).classList.add('active-page');
+
+        const links = document.querySelectorAll('.nav-link');
+        links.forEach(link => link.classList.remove('active'));
+        document.getElementById('link-' + pageId).classList.add('active');
+
+        window.scrollTo(0, 0);
+    }
+</script>
+
+</body>
+</html>
