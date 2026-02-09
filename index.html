@@ -3,287 +3,720 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quentin Chapuis | Portfolio SISR</title>
+    <meta name="description" content="Portfolio de Quentin Chapuis - Étudiant BTS SIO SISR passionné par la cybersécurité et l'administration système">
+    <title>Quentin Chapuis | Portfolio SISR - Cybersécurité</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <style>
-        .page-content { display: none; padding: 50px 10%; min-height: 80vh; }
-        .active-page { display: block; }
-        .fade-in { animation: fadeIn 0.5s; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-        h2 { text-align:center; margin-bottom:40px; }
-        .skill-card { 
-            max-width:900px; 
-            margin:40px auto; 
-            padding:25px; 
-            border-radius:12px; 
-        }
-        .veille-img {
-            width:70%;
-            display:block;
-            margin:0 auto 25px auto;
-            border-radius:12px;
-        }
-        p { margin-bottom:15px; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
-<header>
+<header id="header">
     <nav>
-        <div class="logo">QUENTIN<span>_SISR</span></div>
-        <ul>
-            <li><a href="#" onclick="showPage('accueil')" id="link-accueil" class="nav-link active">Accueil</a></li>
-            <li><a href="#" onclick="showPage('cv')" id="link-cv" class="nav-link">CV</a></li>
-            <li><a href="#" onclick="showPage('veille')" id="link-veille" class="nav-link">Veille</a></li>
-            <li><a href="#" onclick="showPage('parcours')" id="link-parcours" class="nav-link">Parcours</a></li>
-            <li><a href="#" onclick="showPage('grille')" id="link-grille" class="nav-link">Grille d'évaluation</a></li>
-            <li><a href="#" onclick="showPage('projets')" id="link-projets" class="nav-link">Projets</a></li>
+        <div class="logo">
+            <i class="fas fa-shield-halved"></i>
+            QUENTIN<span>_SISR</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#" onclick="showPage('accueil')" id="link-accueil" class="nav-link active">
+                <i class="fas fa-home"></i> Accueil
+            </a></li>
+            <li><a href="#" onclick="showPage('cv')" id="link-cv" class="nav-link">
+                <i class="fas fa-file-alt"></i> CV
+            </a></li>
+            <li><a href="#" onclick="showPage('veille')" id="link-veille" class="nav-link">
+                <i class="fas fa-satellite-dish"></i> Veille
+            </a></li>
+            <li><a href="#" onclick="showPage('parcours')" id="link-parcours" class="nav-link">
+                <i class="fas fa-graduation-cap"></i> Parcours
+            </a></li>
+            <li><a href="#" onclick="showPage('grille')" id="link-grille" class="nav-link">
+                <i class="fas fa-chart-bar"></i> Évaluation
+            </a></li>
+            <li><a href="#" onclick="showPage('projets')" id="link-projets" class="nav-link">
+                <i class="fas fa-code"></i> Projets
+            </a></li>
         </ul>
+        <button class="burger-menu" onclick="toggleMobileMenu()" aria-label="Menu mobile">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 </header>
+
+<!-- Particules d'arrière-plan -->
+<div class="particles" id="particles"></div>
 
 <main id="main-content">
 
     <!-- ACCUEIL -->
-    <section id="accueil" class="page-content active-page fade-in">
+    <section id="accueil" class="page-content active-page">
         <div class="hero">
             <div class="hero-text">
-                <h1>Bonjour, je suis <span class="highlight">Quentin Chapuis</span></h1>
+                <div class="hero-badge">
+                    <i class="fas fa-lock"></i>
+                    Cybersécurité & Infrastructure
+                </div>
+                
+                <h1 class="glitch-text" data-text="Quentin Chapuis">
+                    Bonjour, je suis <span class="highlight">Quentin Chapuis</span>
+                </h1>
 
-                <p>
-                    Étudiant au <strong>CFAI</strong> en <strong>BTS SIO option SISR</strong>, je me forme aux métiers 
-                    de l’administration système, du réseau et de la cybersécurité. J’aime comprendre, optimiser et 
-                    sécuriser les environnements techniques, et je développe mes compétences à travers des projets 
-                    concrets et des environnements professionnels réels.
-                </p>
+                <div class="typing-container">
+                    <p class="typing-text">
+                        <span class="typed-cursor">|</span>
+                        Passionné par la cybersécurité et l'administration système
+                    </p>
+                </div>
 
-                <p>
-                    Je suis actuellement en alternance chez <strong>Focal JMLab</strong>, une entreprise française 
-                    fondée en 1979 et reconnue mondialement comme l’un des leaders de l’acoustique haut de gamme. 
-                    Focal conçoit et fabrique des enceintes haute‑fidélité, des casques audio premium, des systèmes 
-                    automobiles et des solutions professionnelles destinées aux studios d’enregistrement.
-                </p>
+                <div class="hero-description">
+                    <p>
+                        Depuis toujours <strong>passionné par l'informatique</strong>, et plus particulièrement par 
+                        la <strong class="highlight-cyber">cybersécurité</strong>, j'ai décidé de transformer cette 
+                        passion en carrière professionnelle. C'est cette fascination pour la protection des systèmes 
+                        et la sécurisation des infrastructures qui m'a naturellement conduit à rejoindre le 
+                        <strong>CFAI</strong> pour un <strong>BTS SIO option SISR</strong>.
+                    </p>
 
-                <p>
-                    L’entreprise se distingue par son savoir‑faire industriel, ses innovations technologiques 
-                    (membranes exclusives, matériaux composites, procédés de précision) et sa fabrication 
-                    majoritairement française. Travailler chez Focal JMLab me permet d’évoluer dans un environnement 
-                    où l’exigence, la qualité et l’innovation sont au cœur de chaque projet.
-                </p>
+                    <p>
+                        Ma formation me permet d'approfondir mes connaissances en <strong>administration système</strong>, 
+                        <strong>réseaux</strong> et bien sûr en <strong>sécurité informatique</strong>. J'aime comprendre 
+                        le fonctionnement des systèmes en profondeur, identifier les vulnérabilités potentielles, et mettre 
+                        en place des solutions robustes pour protéger les infrastructures critiques.
+                    </p>
 
-                <p>
-                    J’y participe à la gestion et à la sécurisation des infrastructures informatiques, ce qui me 
-                    permet de développer mes compétences techniques tout en contribuant au fonctionnement d’une 
-                    entreprise de renommée internationale.
-                </p>
+                    <p>
+                        Actuellement en alternance chez <strong>Focal JMLab</strong>, une entreprise française fondée en 
+                        1979 et reconnue mondialement comme l'un des leaders de l'acoustique haut de gamme, je mets en 
+                        pratique mes compétences au quotidien. Focal conçoit et fabrique des enceintes haute-fidélité, 
+                        des casques audio premium, des systèmes automobiles et des solutions professionnelles destinées 
+                        aux studios d'enregistrement.
+                    </p>
+
+                    <p>
+                        Au sein de cette entreprise d'excellence, je participe activement à la <strong>gestion et à la 
+                        sécurisation des infrastructures informatiques</strong>. Cette expérience me permet de développer 
+                        mes compétences techniques dans un environnement professionnel exigeant, où l'innovation, la qualité 
+                        et la sécurité sont au cœur de chaque projet.
+                    </p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-code"></i>
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Projets réalisés</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-server"></i>
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Technologies cloud</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Sécurité avant tout</div>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <a href="#" onclick="showPage('projets')" class="btn-primary">
+                        <i class="fas fa-rocket"></i> Voir mes projets
+                    </a>
+                    <a href="#" onclick="showPage('veille')" class="btn-secondary">
+                        <i class="fas fa-satellite-dish"></i> Ma veille tech
+                    </a>
+                </div>
+
+                <div class="scroll-indicator">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CV -->
-    <section id="cv" class="page-content fade-in">
-        <h2>Mon CV</h2>
+    <section id="cv" class="page-content">
+        <div class="page-header">
+            <h2><i class="fas fa-file-alt"></i> Mon Curriculum Vitae</h2>
+            <div class="header-line"></div>
+        </div>
 
-        <div class="skill-card" style="text-align:center;">
-            <h3>Curriculum Vitae</h3>
-            <p>Mon CV est disponible dans le dossier du site.</p>
+        <div class="content-wrapper">
+            <div class="cv-card">
+                <div class="cv-icon">
+                    <i class="fas fa-file-pdf"></i>
+                </div>
+                <h3>Télécharger mon CV</h3>
+                <p>Mon curriculum vitae complet est disponible au format PDF.</p>
+                <p class="cv-note">
+                    <i class="fas fa-info-circle"></i> 
+                    Document disponible dans le dossier du site
+                </p>
+                <button class="btn-download" disabled>
+                    <i class="fas fa-download"></i> Télécharger le CV (PDF)
+                </button>
+            </div>
         </div>
     </section>
 
     <!-- VEILLE TECHNOLOGIQUE -->
-    <section id="veille" class="page-content fade-in">
-        <h2>Veille Technologique</h2>
-
-        <!-- INTRO -->
-        <div class="skill-card">
-            <h3>Introduction</h3>
-            <p>
-                Dans le cadre de mon BTS SIO SISR, j’ai mis en place une veille technologique afin de suivre 
-                l’évolution des technologies, des menaces et des infrastructures modernes.
-            </p>
-            <p>J’ai choisi deux thématiques essentielles :</p>
-            <ul>
-                <li><strong>Nouvelles menaces et vulnérabilités</strong></li>
-                <li><strong>Cloud computing (AWS, Azure, Google Cloud)</strong></li>
-            </ul>
+    <section id="veille" class="page-content">
+        <div class="page-header">
+            <h2><i class="fas fa-satellite-dish"></i> Veille Technologique</h2>
+            <div class="header-line"></div>
         </div>
 
-        <!-- VEILLE 1 -->
-        <div class="skill-card">
-            <img src="image/menaces-cybernetiques-2024-evolution-defis.jpg" class="veille-img" alt="Cybersécurité">
+        <div class="content-wrapper">
+            <!-- INTRO -->
+            <div class="veille-intro">
+                <div class="intro-icon">
+                    <i class="fas fa-binoculars"></i>
+                </div>
+                <h3>Pourquoi une veille technologique ?</h3>
+                <p>
+                    Dans le cadre de mon BTS SIO SISR et de ma passion pour la cybersécurité, j'ai mis en place 
+                    une veille technologique rigoureuse pour suivre l'évolution constante des technologies, 
+                    des menaces et des infrastructures modernes.
+                </p>
+                <p>J'ai choisi deux thématiques essentielles et complémentaires :</p>
+                <div class="themes-grid">
+                    <div class="theme-badge">
+                        <i class="fas fa-bug"></i> Nouvelles menaces et vulnérabilités
+                    </div>
+                    <div class="theme-badge">
+                        <i class="fas fa-cloud"></i> Cloud computing (AWS, Azure, Google Cloud)
+                    </div>
+                </div>
+            </div>
 
-            <h3>Veille 1 — Nouvelles menaces et vulnérabilités</h3>
+            <!-- VEILLE 1 -->
+            <div class="veille-card">
+                <div class="veille-header">
+                    <div class="veille-number">01</div>
+                    <h3>Nouvelles menaces et vulnérabilités</h3>
+                </div>
 
-            <h4>Pourquoi ce sujet ?</h4>
-            <p>
-                La cybersécurité évolue très rapidement : nouvelles attaques, failles critiques, exploitation 
-                de l’IA par les cybercriminels… Ce sujet est essentiel pour comprendre les risques actuels.
-            </p>
+                <div class="veille-image-container">
+                    <img src="image/menaces-cybernetiques-2024-evolution-defis.jpg" alt="Cybersécurité - Menaces et vulnérabilités">
+                    <div class="image-overlay">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                </div>
 
-            <h4>Tendances actuelles</h4>
-            <ul>
-                <li>Ransomware nouvelle génération</li>
-                <li>Attaques supply chain</li>
-                <li>Exploitation de l’IA</li>
-                <li>Zero‑Day</li>
-            </ul>
+                <div class="veille-content">
+                    <div class="section-block">
+                        <h4><i class="fas fa-question-circle"></i> Pourquoi ce sujet ?</h4>
+                        <p>
+                            La cybersécurité évolue à une vitesse fulgurante. Chaque jour apporte son lot de 
+                            nouvelles attaques sophistiquées, de failles critiques découvertes dans des systèmes 
+                            réputés sûrs, et d'exploitation innovante de l'IA par les cybercriminels. Cette veille 
+                            est essentielle pour comprendre les risques actuels et anticiper les menaces de demain.
+                        </p>
+                    </div>
 
-            <h4>Vulnérabilités fréquentes</h4>
-            <ul>
-                <li>Mauvaises configurations</li>
-                <li>Interfaces d’administration exposées</li>
-                <li>Clés API dans le code</li>
-                <li>Conteneurs mal isolés</li>
-                <li>Bases de données publiques</li>
-            </ul>
+                    <div class="section-block">
+                        <h4><i class="fas fa-chart-line"></i> Tendances actuelles</h4>
+                        <ul class="custom-list">
+                            <li><i class="fas fa-virus"></i> <strong>Ransomware nouvelle génération :</strong> Attaques double/triple extorsion</li>
+                            <li><i class="fas fa-link"></i> <strong>Attaques supply chain :</strong> Compromission de la chaîne d'approvisionnement</li>
+                            <li><i class="fas fa-robot"></i> <strong>Exploitation de l'IA :</strong> Deepfakes, phishing automatisé, malwares adaptatifs</li>
+                            <li><i class="fas fa-exclamation-triangle"></i> <strong>Zero-Day :</strong> Vulnérabilités exploitées avant leur découverte</li>
+                        </ul>
+                    </div>
 
-            <h4>Bonnes pratiques</h4>
-            <ul>
-                <li>Mises à jour régulières</li>
-                <li>MFA obligatoire</li>
-                <li>Segmentation réseau</li>
-                <li>Sauvegardes hors ligne</li>
-                <li>Analyse des journaux</li>
-            </ul>
+                    <div class="section-block">
+                        <h4><i class="fas fa-bug"></i> Vulnérabilités fréquentes</h4>
+                        <ul class="custom-list danger">
+                            <li><i class="fas fa-tools"></i> Mauvaises configurations système</li>
+                            <li><i class="fas fa-door-open"></i> Interfaces d'administration exposées publiquement</li>
+                            <li><i class="fas fa-key"></i> Clés API hardcodées dans le code source</li>
+                            <li><i class="fas fa-box"></i> Conteneurs Docker mal isolés</li>
+                            <li><i class="fas fa-database"></i> Bases de données accessibles publiquement</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-block success">
+                        <h4><i class="fas fa-check-circle"></i> Bonnes pratiques de sécurité</h4>
+                        <ul class="custom-list">
+                            <li><i class="fas fa-sync"></i> Mises à jour régulières et automatisées</li>
+                            <li><i class="fas fa-mobile-alt"></i> MFA (Authentification multi-facteurs) obligatoire</li>
+                            <li><i class="fas fa-network-wired"></i> Segmentation réseau stricte</li>
+                            <li><i class="fas fa-hdd"></i> Sauvegardes hors ligne (règle 3-2-1)</li>
+                            <li><i class="fas fa-file-alt"></i> Analyse continue des journaux (SIEM)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VEILLE 2 -->
+            <div class="veille-card">
+                <div class="veille-header">
+                    <div class="veille-number">02</div>
+                    <h3>Cloud Computing (AWS, Azure, Google Cloud)</h3>
+                </div>
+
+                <div class="veille-image-container">
+                    <img src="image/veille_cloud.jpg" alt="Cloud Computing - AWS, Azure, Google Cloud">
+                    <div class="image-overlay">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                </div>
+
+                <div class="veille-content">
+                    <div class="section-block">
+                        <h4><i class="fas fa-question-circle"></i> Pourquoi ce sujet ?</h4>
+                        <p>
+                            Le cloud computing est devenu incontournable dans les infrastructures modernes. AWS, Azure 
+                            et Google Cloud Platform représentent aujourd'hui le cœur des systèmes d'information des 
+                            entreprises. Comprendre ces technologies est essentiel pour tout professionnel de l'infrastructure 
+                            et de la sécurité.
+                        </p>
+                    </div>
+
+                    <div class="section-block">
+                        <h4><i class="fas fa-chart-line"></i> Tendances du cloud</h4>
+                        <ul class="custom-list">
+                            <li><i class="fas fa-rocket"></i> <strong>Croissance exponentielle :</strong> Migration massive vers le cloud public</li>
+                            <li><i class="fas fa-layer-group"></i> <strong>Multi-cloud & hybride :</strong> Combinaison de plusieurs fournisseurs</li>
+                            <li><i class="fas fa-brain"></i> <strong>IA et Machine Learning :</strong> Services managés d'intelligence artificielle</li>
+                            <li><i class="fas fa-infinity"></i> <strong>Serverless :</strong> Architecture sans serveur (Lambda, Functions)</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-block">
+                        <h4><i class="fas fa-cloud"></i> Comparatif des principaux fournisseurs</h4>
+                        <div class="cloud-providers">
+                            <div class="provider-card aws">
+                                <i class="fab fa-aws"></i>
+                                <h5>Amazon Web Services (AWS)</h5>
+                                <ul>
+                                    <li>EC2 (machines virtuelles)</li>
+                                    <li>S3 (stockage objet)</li>
+                                    <li>Lambda (serverless)</li>
+                                    <li>RDS (bases de données)</li>
+                                </ul>
+                            </div>
+                            <div class="provider-card azure">
+                                <i class="fab fa-microsoft"></i>
+                                <h5>Microsoft Azure</h5>
+                                <ul>
+                                    <li>Virtual Machines</li>
+                                    <li>Azure AD (identité)</li>
+                                    <li>SQL Database</li>
+                                    <li>App Services</li>
+                                </ul>
+                            </div>
+                            <div class="provider-card gcp">
+                                <i class="fab fa-google"></i>
+                                <h5>Google Cloud Platform</h5>
+                                <ul>
+                                    <li>Compute Engine</li>
+                                    <li>GKE (Kubernetes)</li>
+                                    <li>BigQuery (analytics)</li>
+                                    <li>Cloud Functions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-block">
+                        <h4><i class="fas fa-shield-alt"></i> Enjeux de sécurité cloud</h4>
+                        <ul class="custom-list danger">
+                            <li><i class="fas fa-exclamation-triangle"></i> Mauvaises configurations (principales sources de failles)</li>
+                            <li><i class="fas fa-user-lock"></i> Rôles IAM trop permissifs</li>
+                            <li><i class="fas fa-folder-open"></i> Buckets S3/Blob publics par erreur</li>
+                            <li><i class="fas fa-key"></i> Clés API non protégées ou exposées</li>
+                            <li><i class="fas fa-file-alt"></i> Logs et monitoring non activés</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-block success">
+                        <h4><i class="fas fa-check-circle"></i> Bonnes pratiques cloud</h4>
+                        <ul class="custom-list">
+                            <li><i class="fas fa-lock"></i> Chiffrement systématique (au repos et en transit)</li>
+                            <li><i class="fas fa-mobile-alt"></i> MFA obligatoire sur tous les comptes</li>
+                            <li><i class="fas fa-code"></i> Infrastructure as Code (Terraform, CloudFormation)</li>
+                            <li><i class="fas fa-eye"></i> Surveillance continue et alertes (CloudWatch, Monitor)</li>
+                            <li><i class="fas fa-network-wired"></i> Segmentation réseau (VPC, subnets privés)</li>
+                            <li><i class="fas fa-balance-scale"></i> Principe du moindre privilège (Least Privilege)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- VEILLE 2 -->
-        <div class="skill-card">
-            <img src="image/veille_cloud.jpg" class="veille-img" alt="Cloud Computing">
-
-            <h3>Veille 2 — Cloud Computing (AWS, Azure, Google Cloud)</h3>
-
-            <h4>Pourquoi ce sujet ?</h4>
-            <p>
-                Le cloud est devenu incontournable dans les entreprises. AWS, Azure et Google Cloud sont au 
-                cœur des infrastructures modernes.
-            </p>
-
-            <h4>Tendances du cloud</h4>
-            <ul>
-                <li>Croissance du cloud public</li>
-                <li>Multi‑cloud et hybride</li>
-                <li>Explosion de l’IA</li>
-            </ul>
-
-            <h4>Comparatif des fournisseurs</h4>
-            <ul>
-                <li>AWS : EC2, S3, Lambda</li>
-                <li>Azure : VM, Azure AD, SQL Database</li>
-                <li>Google Cloud : GKE, BigQuery</li>
-            </ul>
-
-            <h4>Enjeux de sécurité</h4>
-            <ul>
-                <li>Mauvaises configurations</li>
-                <li>Rôles IAM trop permissifs</li>
-                <li>Buckets publics</li>
-                <li>Clés API non protégées</li>
-                <li>Logs non activés</li>
-            </ul>
-
-            <h4>Bonnes pratiques cloud</h4>
-            <ul>
-                <li>Chiffrement systématique</li>
-                <li>MFA obligatoire</li>
-                <li>Infrastructure as Code</li>
-                <li>Surveillance continue</li>
-                <li>Segmentation réseau</li>
-            </ul>
-        </div>
-
     </section>
 
     <!-- PARCOURS -->
-    <section id="parcours" class="page-content fade-in">
-        <h2>Mon Parcours</h2>
+    <section id="parcours" class="page-content">
+        <div class="page-header">
+            <h2><i class="fas fa-graduation-cap"></i> Mon Parcours</h2>
+            <div class="header-line"></div>
+        </div>
 
-        <div class="skill-card">
-            <h3>BTS SIO SISR</h3>
-            <p>2024 - Présent | Formation technique réseaux.</p>
+        <div class="content-wrapper">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i> 2024 - Présent
+                        </div>
+                        <h3>BTS SIO option SISR</h3>
+                        <p class="timeline-location">
+                            <i class="fas fa-map-marker-alt"></i> CFAI - Centre de Formation des Apprentis de l'Industrie
+                        </p>
+                        <p>
+                            Formation technique en <strong>Solutions d'Infrastructure, Systèmes et Réseaux</strong>. 
+                            Spécialisation en administration système, réseaux et cybersécurité.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag"><i class="fas fa-server"></i> Administration Système</span>
+                            <span class="tag"><i class="fas fa-network-wired"></i> Réseaux</span>
+                            <span class="tag"><i class="fas fa-shield-alt"></i> Cybersécurité</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i> 2024 - Présent
+                        </div>
+                        <h3>Alternance - Focal JMLab</h3>
+                        <p class="timeline-location">
+                            <i class="fas fa-building"></i> Focal JMLab - Acoustique haut de gamme
+                        </p>
+                        <p>
+                            Gestion et sécurisation des infrastructures informatiques au sein d'une entreprise 
+                            leader mondial de l'acoustique premium.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag"><i class="fas fa-tools"></i> Infrastructure IT</span>
+                            <span class="tag"><i class="fas fa-code"></i> PowerShell</span>
+                            <span class="tag"><i class="fab fa-microsoft"></i> Microsoft Intune</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- GRILLE D'ÉVALUATION -->
-    <section id="grille" class="page-content fade-in">
-        <h2>Grille d'évaluation</h2>
+    <section id="grille" class="page-content">
+        <div class="page-header">
+            <h2><i class="fas fa-chart-bar"></i> Grille d'évaluation</h2>
+            <div class="header-line"></div>
+        </div>
 
-        <div class="skill-card" style="text-align:center;">
-            <h3>Document PDF</h3>
-            <p>Ma grille d'évaluation est disponible dans le dossier du site.</p>
+        <div class="content-wrapper">
+            <div class="cv-card">
+                <div class="cv-icon">
+                    <i class="fas fa-file-pdf"></i>
+                </div>
+                <h3>Document d'évaluation</h3>
+                <p>Ma grille d'évaluation complète est disponible au format PDF.</p>
+                <p class="cv-note">
+                    <i class="fas fa-info-circle"></i> 
+                    Document disponible dans le dossier du site
+                </p>
+                <button class="btn-download" disabled>
+                    <i class="fas fa-download"></i> Télécharger la grille (PDF)
+                </button>
+            </div>
         </div>
     </section>
 
     <!-- PROJETS -->
-    <section id="projets" class="page-content fade-in">
-        <h2>Mes Réalisations</h2>
-
-        <!-- SCRIPT POWERSHELL + INTUNE -->
-        <div class="skill-card">
-            <h3>Script PowerShell — Blocage du Microsoft Store</h3>
-            <p>
-                J’ai développé un script PowerShell permettant de <strong>bloquer l’accès au Microsoft Store</strong> 
-                pour l’ensemble de l’entreprise.  
-                Le script modifie la valeur d’une <strong>clé de registre Windows</strong> afin de désactiver 
-                complètement le Store sur tous les postes concernés.
-            </p>
-
-            <p>
-                Après validation, j’ai déployé ce script à grande échelle via 
-                <strong>Microsoft Intune</strong>, en utilisant les stratégies de déploiement automatisées.  
-                Cela a permis une application uniforme, rapide et sécurisée sur l’ensemble du parc informatique.
-            </p>
-
-            <p>
-                Ce projet m’a permis de travailler sur :  
-                — l’automatisation PowerShell  
-                — la gestion de stratégies de sécurité  
-                — le déploiement à distance via Intune  
-                — la standardisation des postes utilisateurs
-            </p>
+    <section id="projets" class="page-content">
+        <div class="page-header">
+            <h2><i class="fas fa-code"></i> Mes Réalisations</h2>
+            <div class="header-line"></div>
         </div>
 
-        <!-- ACTIVE DIRECTORY -->
-        <div class="skill-card">
-            <h3>Active Directory</h3>
-            <p>
-                Gestion des utilisateurs, des groupes et des droits d’accès.  
-                Création de comptes, organisation des OU, et application de règles de sécurité.
-            </p>
-        </div>
+        <div class="content-wrapper">
+            <div class="projects-grid">
+                
+                <!-- PROJET 1 - PowerShell + Intune -->
+                <div class="project-card featured">
+                    <div class="project-badge">
+                        <i class="fas fa-star"></i> Projet phare
+                    </div>
+                    <div class="project-icon">
+                        <i class="fab fa-windows"></i>
+                    </div>
+                    <h3>Blocage du Microsoft Store via PowerShell & Intune</h3>
+                    
+                    <div class="project-description">
+                        <p>
+                            Développement et déploiement d'une solution automatisée de sécurité pour bloquer l'accès 
+                            au Microsoft Store sur l'ensemble du parc informatique de l'entreprise.
+                        </p>
+                    </div>
 
-        <!-- ROUTAGE CISCO -->
-        <div class="skill-card">
-            <h3>Routage Cisco</h3>
-            <p>
-                Configuration de routeurs et de switches, mise en place de VLANs, routage statique 
-                et segmentation réseau pour améliorer la sécurité et les performances.
-            </p>
-        </div>
+                    <div class="project-details">
+                        <h4><i class="fas fa-tasks"></i> Objectifs</h4>
+                        <ul>
+                            <li>Empêcher les installations non autorisées d'applications</li>
+                            <li>Standardiser la sécurité des postes utilisateurs</li>
+                            <li>Automatiser le déploiement à grande échelle</li>
+                        </ul>
 
+                        <h4><i class="fas fa-cogs"></i> Solution technique</h4>
+                        <ul>
+                            <li><strong>Script PowerShell</strong> : Modification de la clé de registre Windows</li>
+                            <li><strong>Microsoft Intune</strong> : Déploiement automatisé sur tous les postes</li>
+                            <li><strong>Gestion centralisée</strong> : Configuration via stratégies de groupe</li>
+                        </ul>
+
+                        <h4><i class="fas fa-graduation-cap"></i> Compétences développées</h4>
+                        <div class="skills-tags">
+                            <span class="skill-tag"><i class="fas fa-terminal"></i> PowerShell</span>
+                            <span class="skill-tag"><i class="fab fa-microsoft"></i> Microsoft Intune</span>
+                            <span class="skill-tag"><i class="fas fa-shield-alt"></i> Sécurité Windows</span>
+                            <span class="skill-tag"><i class="fas fa-network-wired"></i> Gestion de parc</span>
+                            <span class="skill-tag"><i class="fas fa-cogs"></i> Automatisation</span>
+                        </div>
+                    </div>
+
+                    <div class="project-impact">
+                        <i class="fas fa-check-circle"></i> Déploiement réussi sur 100% du parc informatique
+                    </div>
+                </div>
+
+                <!-- PROJET 2 - Active Directory -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3>Administration Active Directory</h3>
+                    
+                    <div class="project-description">
+                        <p>
+                            Gestion complète de l'annuaire Active Directory : utilisateurs, groupes, droits d'accès, 
+                            et mise en place de politiques de sécurité.
+                        </p>
+                    </div>
+
+                    <div class="project-details">
+                        <h4><i class="fas fa-tasks"></i> Missions réalisées</h4>
+                        <ul>
+                            <li>Création et gestion des comptes utilisateurs</li>
+                            <li>Organisation des Unités d'Organisation (OU)</li>
+                            <li>Application de GPO (Group Policy Objects)</li>
+                            <li>Gestion des droits et permissions</li>
+                            <li>Sécurisation des accès et audit</li>
+                        </ul>
+
+                        <h4><i class="fas fa-graduation-cap"></i> Compétences</h4>
+                        <div class="skills-tags">
+                            <span class="skill-tag"><i class="fab fa-windows"></i> Active Directory</span>
+                            <span class="skill-tag"><i class="fas fa-sitemap"></i> GPO</span>
+                            <span class="skill-tag"><i class="fas fa-user-shield"></i> Gestion des droits</span>
+                            <span class="skill-tag"><i class="fas fa-server"></i> Windows Server</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJET 3 - Routage Cisco -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Configuration de routage Cisco</h3>
+                    
+                    <div class="project-description">
+                        <p>
+                            Configuration avancée de routeurs et switches Cisco pour optimiser la sécurité et les 
+                            performances réseau.
+                        </p>
+                    </div>
+
+                    <div class="project-details">
+                        <h4><i class="fas fa-tasks"></i> Travaux réalisés</h4>
+                        <ul>
+                            <li>Configuration de routeurs et switches Cisco</li>
+                            <li>Mise en place de VLANs pour segmentation réseau</li>
+                            <li>Routage statique et dynamique</li>
+                            <li>Sécurisation des accès (ACL, port-security)</li>
+                            <li>Optimisation des performances réseau</li>
+                        </ul>
+
+                        <h4><i class="fas fa-graduation-cap"></i> Compétences</h4>
+                        <div class="skills-tags">
+                            <span class="skill-tag"><i class="fas fa-network-wired"></i> Cisco IOS</span>
+                            <span class="skill-tag"><i class="fas fa-layer-group"></i> VLANs</span>
+                            <span class="skill-tag"><i class="fas fa-route"></i> Routage</span>
+                            <span class="skill-tag"><i class="fas fa-shield-alt"></i> ACL</span>
+                            <span class="skill-tag"><i class="fas fa-ethernet"></i> Switching</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Section compétences techniques -->
+            <div class="tech-stack">
+                <h3><i class="fas fa-tools"></i> Technologies et outils maîtrisés</h3>
+                <div class="tech-categories">
+                    <div class="tech-category">
+                        <h4><i class="fas fa-server"></i> Systèmes</h4>
+                        <div class="tech-items">
+                            <span><i class="fab fa-windows"></i> Windows Server</span>
+                            <span><i class="fab fa-linux"></i> Linux</span>
+                            <span><i class="fas fa-terminal"></i> PowerShell</span>
+                            <span><i class="fas fa-terminal"></i> Bash</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h4><i class="fas fa-network-wired"></i> Réseaux</h4>
+                        <div class="tech-items">
+                            <span><i class="fas fa-project-diagram"></i> Cisco</span>
+                            <span><i class="fas fa-layer-group"></i> VLANs</span>
+                            <span><i class="fas fa-route"></i> Routage</span>
+                            <span><i class="fas fa-fire"></i> Pare-feu</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h4><i class="fas fa-cloud"></i> Cloud</h4>
+                        <div class="tech-items">
+                            <span><i class="fab fa-aws"></i> AWS</span>
+                            <span><i class="fab fa-microsoft"></i> Azure</span>
+                            <span><i class="fab fa-google"></i> Google Cloud</span>
+                            <span><i class="fab fa-microsoft"></i> Intune</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h4><i class="fas fa-shield-alt"></i> Sécurité</h4>
+                        <div class="tech-items">
+                            <span><i class="fas fa-bug"></i> Pentesting</span>
+                            <span><i class="fas fa-user-lock"></i> IAM</span>
+                            <span><i class="fas fa-lock"></i> Chiffrement</span>
+                            <span><i class="fas fa-shield-virus"></i> Antivirus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 </main>
 
-<footer><p>&copy; 2026 - Quentin Chapuis</p></footer>
+<footer>
+    <div class="footer-content">
+        <div class="footer-left">
+            <div class="logo">
+                <i class="fas fa-shield-halved"></i>
+                QUENTIN<span>_SISR</span>
+            </div>
+            <p>Étudiant passionné par la cybersécurité et l'administration système</p>
+        </div>
+        <div class="footer-right">
+            <p>&copy; 2026 - Quentin Chapuis | Portfolio BTS SIO SISR</p>
+            <p class="footer-tech">
+                <i class="fas fa-code"></i> Développé avec passion pour la technologie
+            </p>
+        </div>
+    </div>
+</footer>
 
 <script>
+    // Navigation entre les pages
     function showPage(pageId) {
         const pages = document.querySelectorAll('.page-content');
-        pages.forEach(page => page.classList.remove('active-page'));
+        pages.forEach(page => {
+            page.classList.remove('active-page');
+        });
 
-        document.getElementById(pageId).classList.add('active-page');
+        const targetPage = document.getElementById(pageId);
+        targetPage.classList.add('active-page');
+        
+        // Scroll to top smooth
+        window.scrollTo({top: 0, behavior: 'smooth'});
 
         const links = document.querySelectorAll('.nav-link');
         links.forEach(link => link.classList.remove('active'));
         document.getElementById('link-' + pageId).classList.add('active');
 
-        window.scrollTo(0, 0);
+        // Fermer le menu mobile si ouvert
+        const navMenu = document.querySelector('.nav-menu');
+        const burger = document.querySelector('.burger-menu');
+        if (navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            burger.classList.remove('active');
+        }
     }
+
+    // Menu burger mobile
+    function toggleMobileMenu() {
+        const navMenu = document.querySelector('.nav-menu');
+        const burger = document.querySelector('.burger-menu');
+        navMenu.classList.toggle('active');
+        burger.classList.toggle('active');
+    }
+
+    // Header transparent au scroll
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // Animation des particules
+    function createParticles() {
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 50;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 20 + 's';
+            particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            particlesContainer.appendChild(particle);
+        }
+    }
+
+    // Animation au chargement
+    document.addEventListener('DOMContentLoaded', () => {
+        createParticles();
+        
+        // Animation de typing
+        const typingText = document.querySelector('.typing-text');
+        if (typingText) {
+            typingText.style.opacity = '1';
+        }
+    });
+
+    // Animation on scroll pour les cards
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observer tous les cards
+    document.querySelectorAll('.skill-card, .project-card, .veille-card, .timeline-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.6s ease-out';
+        observer.observe(el);
+    });
 </script>
 
 </body>
