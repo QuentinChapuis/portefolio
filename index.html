@@ -19,19 +19,34 @@
             QUENTIN<span>_CHAPUIS</span>
         </div>
         <ul class="nav-menu">
-            <li><a href="#" onclick="showPage('accueil')" id="link-accueil" class="nav-link active"><i class="fas fa-home"></i> Accueil</a></li>
-            <li><a href="#" onclick="showPage('cv')" id="link-cv" class="nav-link"><i class="fas fa-file-alt"></i> CV</a></li>
-            <li><a href="#" onclick="showPage('veille')" id="link-veille" class="nav-link"><i class="fas fa-satellite-dish"></i> Veille</a></li>
-            <li><a href="#" onclick="showPage('parcours')" id="link-parcours" class="nav-link"><i class="fas fa-graduation-cap"></i> Parcours</a></li>
-            <li><a href="#" onclick="showPage('grille')" id="link-grille" class="nav-link"><i class="fas fa-chart-bar"></i> Évaluation</a></li>
-            <li><a href="#" onclick="showPage('projets')" id="link-projets" class="nav-link"><i class="fas fa-code"></i> Projets</a></li>
+            <li><a href="#" onclick="showPage('accueil')" id="link-accueil" class="nav-link active">
+                <i class="fas fa-home"></i> Accueil
+            </a></li>
+            <li><a href="#" onclick="showPage('cv')" id="link-cv" class="nav-link">
+                <i class="fas fa-file-alt"></i> CV
+            </a></li>
+            <li><a href="#" onclick="showPage('veille')" id="link-veille" class="nav-link">
+                <i class="fas fa-satellite-dish"></i> Veille
+            </a></li>
+            <li><a href="#" onclick="showPage('parcours')" id="link-parcours" class="nav-link">
+                <i class="fas fa-graduation-cap"></i> Parcours
+            </a></li>
+            <li><a href="#" onclick="showPage('grille')" id="link-grille" class="nav-link">
+                <i class="fas fa-chart-bar"></i> Grille de compétences
+            </a></li>
+            <li><a href="#" onclick="showPage('projets')" id="link-projets" class="nav-link">
+                <i class="fas fa-code"></i> Projets
+            </a></li>
         </ul>
         <button class="burger-menu" onclick="toggleMobileMenu()" aria-label="Menu mobile">
-            <span></span><span></span><span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
     </nav>
 </header>
 
+<!-- Particules d'arrière-plan -->
 <div class="particles" id="particles"></div>
 
 <main id="main-content">
@@ -40,20 +55,46 @@
     <section id="accueil" class="page-content active-page">
         <div class="hero">
             <div class="hero-text">
-                <div class="hero-badge"><i class="fas fa-lock"></i> Cybersécurité &amp; Infrastructure</div>
-                <h1>Bonjour, je suis <span class="highlight">Quentin Chapuis</span></h1>
+                <div class="hero-badge">
+                    <i class="fas fa-lock"></i>
+                    Cybersécurité & Infrastructure
+                </div>
+                
+                <h1 class="glitch-text" data-text="Quentin Chapuis">
+                    Bonjour, je suis <span class="highlight">Quentin Chapuis</span>
+                </h1>
+
                 <div class="typing-container">
-                    <p class="typing-text"><span class="typed-cursor">|</span> Passionné par la cybersécurité et l'administration système</p>
+                    <p class="typing-text">
+                        <span class="typed-cursor">|</span>
+                        Étudiant en cybersécurité et administration système
+                    </p>
                 </div>
+
                 <div class="hero-description">
-                    <p>Passionné par l'<strong>informatique</strong> et la <strong class="highlight-cyber">cybersécurité</strong>, j'ai choisi le <strong>BTS SIO option SISR</strong> au <strong>CFAI</strong> pour transformer ma passion en expertise professionnelle.</p>
-                    <p>En alternance chez <strong>Focal JMLab</strong>, leader mondial de l'acoustique haut de gamme, je participe à la <strong>gestion et sécurisation des infrastructures IT</strong> dans un environnement professionnel exigeant.</p>
+                    <p>
+                        Étudiant en <strong>BTS SIO option SISR</strong> au <strong>CFAI</strong>, je me forme à l'<strong>informatique</strong> 
+                        et à la <strong class="highlight-cyber">cybersécurité</strong> pour développer mon expertise professionnelle.
+                    </p>
+
+                    <p>
+                        En alternance chez <strong>Focal JMLab</strong>, leader mondial de l'acoustique haut de gamme, je participe 
+                        à la <strong>gestion et sécurisation des infrastructures IT</strong> dans un environnement professionnel exigeant.
+                    </p>
                 </div>
+
                 <div class="actions">
-                    <a href="#" onclick="showPage('projets')" class="btn-primary"><i class="fas fa-rocket"></i> Voir mes projets</a>
-                    <a href="#" onclick="showPage('veille')" class="btn-secondary"><i class="fas fa-satellite-dish"></i> Ma veille tech</a>
+                    <a href="#" onclick="showPage('projets')" class="btn-primary">
+                        <i class="fas fa-rocket"></i> Voir mes projets
+                    </a>
+                    <a href="#" onclick="showPage('veille')" class="btn-secondary">
+                        <i class="fas fa-satellite-dish"></i> Ma veille tech
+                    </a>
                 </div>
-                <div class="scroll-indicator"><i class="fas fa-chevron-down"></i></div>
+
+                <div class="scroll-indicator">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
             </div>
         </div>
     </section>
@@ -64,19 +105,16 @@
             <h2><i class="fas fa-file-alt"></i> Mon Curriculum Vitae</h2>
             <div class="header-line"></div>
         </div>
+
         <div class="content-wrapper">
-            <div class="cv-card cv-card-single">
-                <div class="cv-icon"><i class="fas fa-file-pdf"></i></div>
-                <h3>Consulter mon CV</h3>
-                <p>Mon curriculum vitae complet est disponible en ligne au format PDF. Cliquez ci-dessous pour le visualiser directement dans votre navigateur.</p>
-                <div style="margin:var(--spacing-md) 0; display:flex; flex-direction:column; gap:.5rem; text-align:left;">
-                    <div class="cv-info-row"><i class="fas fa-user"></i> Quentin Chapuis</div>
-                    <div class="cv-info-row"><i class="fas fa-graduation-cap"></i> BTS SIO option SISR – CFAI</div>
-                    <div class="cv-info-row"><i class="fas fa-building"></i> Alternance – Focal JMLab</div>
-                    <div class="cv-info-row"><i class="fas fa-shield-alt"></i> Spécialisation Cybersécurité</div>
+            <div class="cv-card">
+                <div class="cv-icon">
+                    <i class="fas fa-file-pdf"></i>
                 </div>
-                <a href="cv-quentin-chapuis.pdf" target="_blank" class="btn-primary" style="margin-top:var(--spacing-md); display:inline-flex; justify-content:center;">
-                    <i class="fas fa-eye"></i> Visualiser mon CV (PDF)
+                <h3>Télécharger mon CV</h3>
+                <p>Mon curriculum vitae complet est disponible au format PDF.</p>
+                <a href="cv-quentin-chapuis.pdf" target="_blank" class="btn-primary" style="margin-top: var(--spacing-md); display: inline-flex;">
+                    <i class="fas fa-eye"></i> Voir mon CV (PDF)
                 </a>
             </div>
         </div>
@@ -88,16 +126,29 @@
             <h2><i class="fas fa-satellite-dish"></i> Veille Technologique</h2>
             <div class="header-line"></div>
         </div>
-        <div class="content-wrapper">
 
+        <div class="content-wrapper">
+            <!-- INTRO -->
             <div class="veille-intro">
-                <div class="intro-icon"><i class="fas fa-binoculars"></i></div>
+                <div class="intro-icon">
+                    <i class="fas fa-binoculars"></i>
+                </div>
                 <h3>Pourquoi une veille technologique ?</h3>
-                <p>Dans le domaine de l'informatique, et plus particulièrement de la cybersécurité et des infrastructures, les technologies évoluent à une vitesse considérable. Une veille technologique régulière permet d'anticiper les nouvelles menaces, de rester à jour sur les meilleures pratiques et d'adapter les infrastructures aux tendances du marché. Elle est indispensable dans mon cursus BTS SIO SISR et dans ma pratique professionnelle en alternance chez Focal JMLab.</p>
+                <p>
+                    Dans le domaine de l'informatique, et plus particulièrement de la cybersécurité et des
+                    infrastructures, les technologies évoluent à une vitesse considérable. Une veille technologique
+                    régulière permet d'anticiper les nouvelles menaces, de rester à jour sur les meilleures pratiques et
+                    d'adapter les infrastructures aux tendances du marché. Elle est indispensable dans mon cursus BTS
+                    SIO SISR et dans ma pratique professionnelle en alternance chez Focal JMLab.
+                </p>
                 <p>Mes deux axes de veille :</p>
                 <div class="themes-grid">
-                    <div class="theme-badge"><i class="fas fa-bug"></i> Nouvelles menaces et vulnérabilités</div>
-                    <div class="theme-badge"><i class="fas fa-cloud"></i> Cloud computing (AWS, Azure, Google Cloud)</div>
+                    <div class="theme-badge">
+                        <i class="fas fa-bug"></i> Nouvelles menaces et vulnérabilités
+                    </div>
+                    <div class="theme-badge">
+                        <i class="fas fa-cloud"></i> Cloud computing (AWS, Azure, Google Cloud)
+                    </div>
                 </div>
             </div>
 
@@ -107,36 +158,45 @@
                     <div class="veille-number">01</div>
                     <h3>Nouvelles menaces et vulnérabilités</h3>
                 </div>
+
                 <div class="veille-image-container">
-                    <img src="image/menaces-cybernetiques-2024-evolution-defis.jpg" alt="Cybersécurité – Menaces et vulnérabilités">
-                    <div class="image-overlay"><i class="fas fa-shield-virus"></i></div>
+                    <img src="image/menaces-cybernetiques-2024-evolution-defis.jpg" alt="Cybersécurité - Menaces et vulnérabilités">
+                    <div class="image-overlay">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
                 </div>
+
                 <div class="veille-content">
 
                     <div class="section-block">
                         <h4><i class="fas fa-question-circle"></i> Pourquoi ce sujet ?</h4>
-                        <p>Les cybermenaces sont en constante évolution : les attaquants s'adaptent, créent de nouveaux outils et exploitent des vulnérabilités encore inconnues. En tant que futur technicien SISR, connaître le paysage des menaces est essentiel pour concevoir et maintenir des infrastructures résilientes. Cette veille me permet d'anticiper les risques auxquels sont exposées des entreprises comme Focal JMLab et d'y apporter des réponses techniques adaptées.</p>
+                        <p>
+                            Les cybermenaces sont en constante évolution : les attaquants s'adaptent, créent de nouveaux outils et exploitent des vulnérabilités
+                            encore inconnues. En tant que futur technicien SISR, connaître le paysage des menaces est essentiel pour concevoir et maintenir des
+                            infrastructures résilientes. Cette veille me permet d'anticiper les risques auxquels sont exposées des entreprises comme Focal JMLab et
+                            d'y apporter des réponses techniques adaptées.
+                        </p>
                     </div>
 
                     <div class="section-block danger">
                         <h4><i class="fas fa-exclamation-triangle"></i> Les principales catégories de menaces</h4>
-                        <div class="attack-grid">
-                            <div class="attack-card">
+                        <div class="menaces-grid">
+                            <div class="menace-card">
                                 <i class="fas fa-virus"></i>
                                 <h5>Ransomware</h5>
                                 <p>Chiffrement des données suivi d'une demande de rançon. Les groupes comme LockBit ou BlackCat ciblent PME et grandes entreprises.</p>
                             </div>
-                            <div class="attack-card">
+                            <div class="menace-card">
                                 <i class="fas fa-link"></i>
                                 <h5>Supply Chain</h5>
                                 <p>Compromission d'un fournisseur ou d'une dépendance logicielle pour atteindre les clients finaux (ex : SolarWinds 2020).</p>
                             </div>
-                            <div class="attack-card">
+                            <div class="menace-card">
                                 <i class="fas fa-robot"></i>
                                 <h5>IA Offensif</h5>
                                 <p>Utilisation de l'IA pour générer du phishing personnalisé, automatiser des scans et créer des malwares polymorphes.</p>
                             </div>
-                            <div class="attack-card">
+                            <div class="menace-card">
                                 <i class="fas fa-fish"></i>
                                 <h5>Phishing Avancé</h5>
                                 <p>Spear-phishing ciblé, vishing (voix) et smishing (SMS) de plus en plus convaincants grâce à l'IA générative.</p>
@@ -147,40 +207,38 @@
                     <div class="section-block">
                         <h4><i class="fas fa-virus"></i> Zoom : Les ransomwares nouvelle génération</h4>
                         <p>Les ransomwares modernes pratiquent désormais la <strong>double extorsion</strong> (chiffrement + vol de données) et même la <strong>triple extorsion</strong>. Le modèle <strong>Ransomware-as-a-Service (RaaS)</strong> permet à des groupes criminels de louer leur infrastructure à des affiliés, démultipliant ainsi les attaques.</p>
-                        <div class="mini-timeline">
-                            <div class="mini-event"><div class="date">2021</div><p><strong>Colonial Pipeline</strong> – Arrêt d'un pipeline énergétique américain. Rançon de 4,4M$.</p></div>
-                            <div class="mini-event"><div class="date">2022</div><p><strong>Costa Rica</strong> – Premier État à déclarer l'état d'urgence national suite à un ransomware (Conti).</p></div>
-                            <div class="mini-event"><div class="date">2023</div><p><strong>MOVEit Transfer</strong> – Vulnérabilité zero-day exploitée, affecte plus de 2 000 organisations mondiales.</p></div>
-                            <div class="mini-event"><div class="date">2024</div><p><strong>Change Healthcare</strong> – Attaque ALPHV/BlackCat paralysant 30% des pharmacies américaines.</p></div>
+                        <div class="timeline-mini">
+                            <div class="tm-item"><span class="tm-year">2021</span><div class="tm-content"><strong>Colonial Pipeline</strong> – Arrêt d'un pipeline énergétique américain. Rançon de 4,4M$.</div></div>
+                            <div class="tm-item"><span class="tm-year">2022</span><div class="tm-content"><strong>Costa Rica</strong> – Premier État à déclarer l'état d'urgence national suite à un ransomware (Conti).</div></div>
+                            <div class="tm-item"><span class="tm-year">2023</span><div class="tm-content"><strong>MOVEit Transfer</strong> – Vulnérabilité zero-day exploitée, affecte plus de 2 000 organisations mondiales.</div></div>
+                            <div class="tm-item"><span class="tm-year">2024</span><div class="tm-content"><strong>Change Healthcare</strong> – Attaque ALPHV/BlackCat paralysant 30% des pharmacies américaines.</div></div>
                         </div>
                     </div>
 
                     <div class="section-block warning">
                         <h4><i class="fas fa-exclamation-triangle"></i> Vulnérabilités Zero-Day et CVE notables</h4>
-                        <p style="margin-bottom:var(--spacing-md)">Une vulnérabilité <strong>Zero-Day</strong> est une faille non encore corrigée par l'éditeur. Le score CVSS (0–10) mesure la criticité.</p>
+                        <p>Une vulnérabilité <strong>Zero-Day</strong> est une faille non encore corrigée par l'éditeur. Le score CVSS (0–10) mesure la criticité.</p>
                         <div class="cve-list">
-                            <div class="cve-item"><span class="cve-badge critical">CRITIQUE</span><span class="cve-desc"><strong>CVE-2024-3400</strong> – PAN-OS (Palo Alto) : injection de commande sans authentification</span><span class="cve-score critical">10.0</span></div>
-                            <div class="cve-item"><span class="cve-badge critical">CRITIQUE</span><span class="cve-desc"><strong>CVE-2023-44487</strong> – HTTP/2 Rapid Reset : attaque DDoS de niveau record</span><span class="cve-score critical">9.8</span></div>
-                            <div class="cve-item"><span class="cve-badge critical">CRITIQUE</span><span class="cve-desc"><strong>CVE-2021-44228</strong> – Log4Shell (Log4j) : exécution de code à distance</span><span class="cve-score critical">10.0</span></div>
-                            <div class="cve-item"><span class="cve-badge high">ÉLEVÉ</span><span class="cve-desc"><strong>CVE-2024-21762</strong> – FortiOS : lecture de mémoire hors limites</span><span class="cve-score high">9.6</span></div>
-                            <div class="cve-item"><span class="cve-badge medium">MOYEN</span><span class="cve-desc"><strong>CVE-2024-1708</strong> – ConnectWise : traversée de répertoire</span><span class="cve-score medium">7.8</span></div>
+                            <div class="cve-item"><span class="cve-badge critique">CRITIQUE</span><span class="cve-name">CVE-2024-3400</span> – PAN-OS (Palo Alto) : injection de commande sans authentification<span class="cve-score critique">10.0</span></div>
+                            <div class="cve-item"><span class="cve-badge critique">CRITIQUE</span><span class="cve-name">CVE-2023-44487</span> – HTTP/2 Rapid Reset : attaque DDoS de niveau record<span class="cve-score critique">9.8</span></div>
+                            <div class="cve-item"><span class="cve-badge critique">CRITIQUE</span><span class="cve-name">CVE-2021-44228</span> – Log4Shell (Log4j) : exécution de code à distance<span class="cve-score critique">10.0</span></div>
+                            <div class="cve-item"><span class="cve-badge eleve">ÉLEVÉ</span><span class="cve-name">CVE-2024-21762</span> – FortiOS : lecture de mémoire hors limites<span class="cve-score eleve">9.6</span></div>
+                            <div class="cve-item"><span class="cve-badge moyen">MOYEN</span><span class="cve-name">CVE-2024-1708</span> – ConnectWise : traversée de répertoire<span class="cve-score moyen">7.8</span></div>
                         </div>
                     </div>
 
                     <div class="section-block">
                         <h4><i class="fas fa-robot"></i> L'Intelligence Artificielle au service des attaquants</h4>
-                        <ul class="custom-list warning">
-                            <li><i class="fas fa-envelope-open-text"></i><span><strong>Phishing généré par LLM :</strong> L'IA générative permet de créer des emails ultra-personnalisés, sans fautes d'orthographe, dans n'importe quelle langue.</span></li>
-                            <li><i class="fas fa-microphone-alt"></i><span><strong>Deepfake vocal/vidéo :</strong> Des attaquants se font passer pour des dirigeants via appel ou visioconférence pour déclencher des virements frauduleux.</span></li>
-                            <li><i class="fas fa-bug"></i><span><strong>Malwares polymorphes :</strong> Les modèles de code créent des variantes qui échappent aux signatures antivirales classiques.</span></li>
-                            <li><i class="fas fa-search"></i><span><strong>Automatisation du pentest offensif :</strong> Des outils IA accélèrent la reconnaissance, l'énumération et l'exploitation de vulnérabilités.</span></li>
+                        <ul class="custom-list">
+                            <li><i class="fas fa-envelope"></i><span><strong>Phishing généré par LLM :</strong> L'IA générative permet de créer des emails ultra-personnalisés, sans fautes d'orthographe, dans n'importe quelle langue.</span></li>
+                            <li><i class="fas fa-microphone"></i><span><strong>Deepfake vocal/vidéo :</strong> Des attaquants se font passer pour des dirigeants via appel ou visioconférence pour déclencher des virements frauduleux.</span></li>
                         </ul>
                     </div>
 
                     <div class="section-block danger">
                         <h4><i class="fas fa-link"></i> Attaques Supply Chain</h4>
-                        <p style="margin-bottom:var(--spacing-md)">Ces attaques visent des fournisseurs pour compromettre en cascade tous leurs clients, exploitant la confiance accordée aux éditeurs.</p>
-                        <ul class="custom-list danger">
+                        <p>Ces attaques visent des fournisseurs pour compromettre en cascade tous leurs clients, exploitant la confiance accordée aux éditeurs.</p>
+                        <ul class="custom-list arrow-list">
                             <li><i class="fas fa-arrow-right"></i><span><strong>SolarWinds (2020) :</strong> Mise à jour malveillante touchant 18 000 organisations dont des agences gouvernementales américaines.</span></li>
                             <li><i class="fas fa-arrow-right"></i><span><strong>Kaseya VSA (2021) :</strong> Ransomware REvil déployé via une solution de gestion IT, ciblant des MSP et leurs clients.</span></li>
                             <li><i class="fas fa-arrow-right"></i><span><strong>XZ Utils (2024) :</strong> Backdoor introduite dans une bibliothèque Linux de compression, découverte de justesse avant déploiement massif.</span></li>
@@ -189,51 +247,42 @@
 
                     <div class="section-block">
                         <h4><i class="fas fa-chart-line"></i> Tendances clés 2024–2025</h4>
-                        <div class="veille-two-col">
-                            <ul class="custom-list">
-                                <li><i class="fas fa-arrow-trend-up"></i><span>Hausse de 73% des attaques par compromission d'identifiants (credential stuffing)</span></li>
-                                <li><i class="fas fa-arrow-trend-up"></i><span>Explosion des attaques sur les API (40% des incidents en 2024)</span></li>
-                                <li><i class="fas fa-arrow-trend-up"></i><span>APT ciblant les infrastructures critiques (eau, énergie, hôpitaux)</span></li>
-                                <li><i class="fas fa-arrow-trend-up"></i><span>Augmentation des attaques sur les environnements OT/ICS industriels</span></li>
-                            </ul>
-                            <ul class="custom-list">
-                                <li><i class="fas fa-arrow-trend-up"></i><span>Recrudescence des DDoS volumétriques dépassant 1 Tbit/s</span></li>
-                                <li><i class="fas fa-arrow-trend-up"></i><span>Menaces quantiques sur les protocoles de chiffrement actuels</span></li>
-                                <li><i class="fas fa-arrow-trend-up"></i><span>Ciblage croissant des identités et environnements cloud</span></li>
-                                <li><i class="fas fa-arrow-trend-up"></i><span>Attaques « Living off the Land » (LotL) exploitant les outils légitimes</span></li>
-                            </ul>
+                        <div class="tendances-grid">
+                            <div class="tendance-item"><i class="fas fa-arrow-trend-up"></i> Hausse de 73% des attaques par compromission d'identifiants (credential stuffing)</div>
+                            <div class="tendance-item"><i class="fas fa-arrow-trend-up"></i> Recrudescence des DDoS volumétriques dépassant 1 Tbit/s</div>
+                            <div class="tendance-item"><i class="fas fa-arrow-trend-up"></i> Explosion des attaques sur les API (40% des incidents en 2024)</div>
+                            <div class="tendance-item"><i class="fas fa-arrow-trend-up"></i> Menaces quantiques sur les protocoles de chiffrement actuels</div>
+                            <div class="tendance-item"><i class="fas fa-arrow-trend-up"></i> APT ciblant les infrastructures critiques (eau, énergie, santé)</div>
+                            <div class="tendance-item"><i class="fas fa-arrow-trend-up"></i> Ciblage croissant des identités et environnements cloud</div>
+                            <div class="tendance-item"><i class="fas fa-arrow-trend-up"></i> Attaques « Living off the Land » (LotL) exploitant les outils légitimes</div>
                         </div>
                     </div>
 
                     <div class="section-block success">
                         <h4><i class="fas fa-check-circle"></i> Bonnes pratiques de défense</h4>
-                        <div class="veille-two-col">
-                            <ul class="custom-list success">
-                                <li><i class="fas fa-sync-alt"></i><span><strong>Patch management :</strong> Automatiser et prioriser les mises à jour selon le score CVSS.</span></li>
-                                <li><i class="fas fa-mobile-alt"></i><span><strong>MFA obligatoire :</strong> Imposer le multifacteur sur tous les comptes, en priorité VPN et administration.</span></li>
-                                <li><i class="fas fa-network-wired"></i><span><strong>Segmentation réseau :</strong> Isoler les systèmes sensibles pour limiter les mouvements latéraux.</span></li>
-                                <li><i class="fas fa-hdd"></i><span><strong>Règle 3-2-1 :</strong> 3 copies, sur 2 supports différents, dont 1 hors ligne ou immuable.</span></li>
-                            </ul>
-                            <ul class="custom-list success">
-                                <li><i class="fas fa-eye"></i><span><strong>SOC/SIEM :</strong> Centraliser les logs et détecter les comportements anormaux en temps réel.</span></li>
-                                <li><i class="fas fa-user-shield"></i><span><strong>Zero Trust :</strong> Ne jamais faire confiance implicitement, toujours vérifier l'identité et le contexte.</span></li>
-                                <li><i class="fas fa-graduation-cap"></i><span><strong>Sensibilisation :</strong> Former les utilisateurs au phishing et aux ingénieries sociales.</span></li>
-                                <li><i class="fas fa-file-contract"></i><span><strong>PRA/PCA :</strong> Mettre en place et tester régulièrement un Plan de Reprise d'Activité.</span></li>
-                            </ul>
+                        <div class="bonnes-pratiques-grid">
+                            <div class="bp-item"><i class="fas fa-sync"></i><span><strong>Patch management :</strong> Automatiser et prioriser les mises à jour selon le score CVSS.</span></div>
+                            <div class="bp-item"><i class="fas fa-eye"></i><span><strong>SOC/SIEM :</strong> Centraliser les logs et détecter les comportements anormaux en temps réel.</span></div>
+                            <div class="bp-item"><i class="fas fa-mobile-alt"></i><span><strong>MFA obligatoire :</strong> Imposer le multifacteur sur tous les comptes, en priorité VPN et administration.</span></div>
+                            <div class="bp-item"><i class="fas fa-user-shield"></i><span><strong>Zero Trust :</strong> Ne jamais faire confiance implicitement, toujours vérifier l'identité et le contexte.</span></div>
+                            <div class="bp-item"><i class="fas fa-network-wired"></i><span><strong>Segmentation réseau :</strong> Isoler les systèmes sensibles pour limiter les mouvements latéraux.</span></div>
+                            <div class="bp-item"><i class="fas fa-graduation-cap"></i><span><strong>Sensibilisation :</strong> Former les utilisateurs au phishing et aux ingénieries sociales.</span></div>
+                            <div class="bp-item"><i class="fas fa-server"></i><span><strong>Règle 3-2-1 :</strong> 3 copies, sur 2 supports différents, dont 1 hors ligne ou immuable.</span></div>
+                            <div class="bp-item"><i class="fas fa-file-shield"></i><span><strong>PRA/PCA :</strong> Mettre en place et tester régulièrement un Plan de Reprise d'Activité.</span></div>
                         </div>
                     </div>
 
                     <div class="section-block">
                         <h4><i class="fas fa-rss"></i> Sources de veille utilisées</h4>
                         <div class="sources-grid">
-                            <div class="source-chip"><i class="fas fa-globe"></i> CERT-FR (ANSSI)</div>
-                            <div class="source-chip"><i class="fas fa-globe"></i> CVE Mitre</div>
-                            <div class="source-chip"><i class="fas fa-globe"></i> The Hacker News</div>
-                            <div class="source-chip"><i class="fas fa-globe"></i> BleepingComputer</div>
-                            <div class="source-chip"><i class="fas fa-globe"></i> Krebs on Security</div>
-                            <div class="source-chip"><i class="fas fa-globe"></i> Threatpost</div>
-                            <div class="source-chip"><i class="fab fa-twitter"></i> Twitter/X Security</div>
-                            <div class="source-chip"><i class="fab fa-youtube"></i> IppSec / LiveOverflow</div>
+                            <span class="source-badge"><i class="fas fa-globe"></i> CERT-FR (ANSSI)</span>
+                            <span class="source-badge"><i class="fas fa-globe"></i> CVE Mitre</span>
+                            <span class="source-badge"><i class="fas fa-globe"></i> The Hacker News</span>
+                            <span class="source-badge"><i class="fas fa-globe"></i> BleepingComputer</span>
+                            <span class="source-badge"><i class="fas fa-globe"></i> Krebs on Security</span>
+                            <span class="source-badge"><i class="fas fa-globe"></i> Threatpost</span>
+                            <span class="source-badge"><i class="fab fa-twitter"></i> Twitter/X Security</span>
+                            <span class="source-badge"><i class="fab fa-youtube"></i> IppSec / LiveOverflow</span>
                         </div>
                     </div>
 
@@ -246,169 +295,81 @@
                     <div class="veille-number">02</div>
                     <h3>Cloud Computing (AWS, Azure, Google Cloud)</h3>
                 </div>
+
                 <div class="veille-image-container">
-                    <img src="image/veille_cloud.jpg" alt="Cloud Computing – AWS, Azure, Google Cloud">
-                    <div class="image-overlay"><i class="fas fa-cloud"></i></div>
+                    <img src="image/veille_cloud.jpg" alt="Cloud Computing - AWS, Azure, Google Cloud">
+                    <div class="image-overlay">
+                        <i class="fas fa-cloud"></i>
+                    </div>
                 </div>
+
                 <div class="veille-content">
 
                     <div class="section-block">
                         <h4><i class="fas fa-question-circle"></i> Pourquoi ce sujet ?</h4>
-                        <p>Le cloud computing est devenu le socle des infrastructures IT modernes. Selon Gartner, plus de 85% des entreprises adoptent une stratégie <em>cloud-first</em> d'ici 2025. En alternance chez Focal JMLab, j'évolue dans un contexte où Microsoft Azure est central (Intune, Azure AD). Comprendre les trois grands hyperscalers me permet de mieux sécuriser les environnements hybrides et de prendre des décisions d'architecture éclairées.</p>
+                        <p>
+                            Le cloud est devenu essentiel dans les infrastructures modernes. AWS, Azure et GCP sont
+                            au cœur des systèmes d'information des entreprises. Comprendre ces environnements est
+                            indispensable pour un technicien SISR afin de gérer, sécuriser et optimiser les ressources
+                            informatiques, qu'elles soient on-premise ou hébergées.
+                        </p>
                     </div>
 
                     <div class="section-block">
-                        <h4><i class="fas fa-chart-pie"></i> Le marché cloud en chiffres (2024)</h4>
+                        <h4><i class="fas fa-chart-line"></i> Tendances suivies</h4>
                         <ul class="custom-list">
-                            <li><i class="fas fa-dollar-sign"></i><span>Marché mondial estimé à <strong>679 milliards de dollars</strong> en 2024 (Gartner).</span></li>
-                            <li><i class="fab fa-aws"></i><span><strong>AWS</strong> détient environ 31% de parts de marché (leader mondial).</span></li>
-                            <li><i class="fab fa-microsoft"></i><span><strong>Azure</strong> représente 25% du marché et croît le plus vite (+28% annuel).</span></li>
-                            <li><i class="fab fa-google"></i><span><strong>Google Cloud</strong> atteint 11% et mise sur l'IA et le Big Data pour progresser.</span></li>
-                            <li><i class="fas fa-percentage"></i><span>90% des entreprises du Fortune 500 utilisent au moins un service cloud public.</span></li>
+                            <li><i class="fas fa-rocket"></i> Migration vers le cloud public</li>
+                            <li><i class="fas fa-layer-group"></i> Architectures multi-cloud</li>
+                            <li><i class="fas fa-brain"></i> Services IA managés</li>
+                            <li><i class="fas fa-infinity"></i> Serverless (Lambda, Functions)</li>
                         </ul>
                     </div>
 
                     <div class="section-block">
-                        <h4><i class="fas fa-cloud"></i> Les trois hyperscalers en détail</h4>
+                        <h4><i class="fas fa-cloud"></i> Principaux fournisseurs</h4>
                         <div class="cloud-providers">
                             <div class="provider-card aws">
                                 <i class="fab fa-aws"></i>
-                                <h5>AWS – Amazon Web Services</h5>
+                                <h5>AWS</h5>
                                 <ul>
-                                    <li>EC2 (machines virtuelles)</li>
-                                    <li>S3 (stockage objet)</li>
-                                    <li>Lambda (serverless)</li>
-                                    <li>RDS (bases de données managées)</li>
-                                    <li>IAM (gestion des identités)</li>
-                                    <li>CloudTrail (audit &amp; logs)</li>
-                                    <li>GuardDuty (détection menaces)</li>
+                                    <li>EC2, S3</li>
+                                    <li>Lambda</li>
+                                    <li>RDS</li>
                                 </ul>
-                                <p>Leader historique, 200+ services. Idéal pour startups et grandes entreprises.</p>
                             </div>
                             <div class="provider-card azure">
                                 <i class="fab fa-microsoft"></i>
-                                <h5>Azure – Microsoft</h5>
+                                <h5>Azure</h5>
                                 <ul>
-                                    <li>Virtual Machines</li>
-                                    <li>Azure Active Directory (Entra ID)</li>
-                                    <li>Microsoft Intune (MDM)</li>
-                                    <li>Azure SQL Database</li>
-                                    <li>Defender for Cloud</li>
-                                    <li>Sentinel (SIEM cloud-native)</li>
-                                    <li>Azure Functions (serverless)</li>
+                                    <li>VMs</li>
+                                    <li>Azure AD</li>
+                                    <li>SQL Database</li>
                                 </ul>
-                                <p>Intégration native Office 365 / Windows. Dominant en entreprise et administration.</p>
                             </div>
                             <div class="provider-card gcp">
                                 <i class="fab fa-google"></i>
-                                <h5>GCP – Google Cloud Platform</h5>
+                                <h5>GCP</h5>
                                 <ul>
-                                    <li>Compute Engine (VMs)</li>
-                                    <li>GKE (Kubernetes managé)</li>
-                                    <li>BigQuery (data warehouse)</li>
-                                    <li>Cloud Run (containers)</li>
-                                    <li>Vertex AI (IA/ML)</li>
-                                    <li>Chronicle SIEM</li>
-                                    <li>Cloud Armor (WAF/DDoS)</li>
+                                    <li>Compute Engine</li>
+                                    <li>GKE</li>
+                                    <li>BigQuery</li>
                                 </ul>
-                                <p>Leader sur l'IA/ML et le Big Data. Infrastructure réseau mondiale ultra-performante.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="section-block">
-                        <h4><i class="fas fa-table"></i> Comparaison rapide des services phares</h4>
-                        <div style="overflow-x:auto;">
-                            <table class="compare-table">
-                                <thead><tr><th>Fonctionnalité</th><th><i class="fab fa-aws"></i> AWS</th><th><i class="fab fa-microsoft"></i> Azure</th><th><i class="fab fa-google"></i> GCP</th></tr></thead>
-                                <tbody>
-                                    <tr><td>Virtualisation</td><td>EC2</td><td>Virtual Machines</td><td>Compute Engine</td></tr>
-                                    <tr><td>Stockage objet</td><td>S3</td><td>Blob Storage</td><td>Cloud Storage</td></tr>
-                                    <tr><td>Kubernetes</td><td>EKS</td><td>AKS</td><td>GKE</td></tr>
-                                    <tr><td>Identité &amp; Accès</td><td>IAM</td><td>Entra ID</td><td>Cloud IAM</td></tr>
-                                    <tr><td>Serverless</td><td>Lambda</td><td>Azure Functions</td><td>Cloud Run</td></tr>
-                                    <tr><td>SIEM natif</td><td>Security Hub</td><td>Sentinel</td><td>Chronicle</td></tr>
-                                    <tr><td>CDN</td><td>CloudFront</td><td>Azure CDN</td><td>Cloud CDN</td></tr>
-                                    <tr><td>Intégration Microsoft</td><td class="cross"><i class="fas fa-times"></i></td><td class="check"><i class="fas fa-check"></i> Native</td><td class="cross"><i class="fas fa-times"></i></td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="section-block">
-                        <h4><i class="fas fa-layer-group"></i> Les modèles de déploiement</h4>
-                        <ul class="custom-list">
-                            <li><i class="fas fa-cloud"></i><span><strong>Cloud public :</strong> Infrastructure partagée hébergée par le fournisseur. Flexibilité maximale, coûts à l'usage.</span></li>
-                            <li><i class="fas fa-server"></i><span><strong>Cloud privé :</strong> Infrastructure dédiée, on-premise ou co-localisée. Contrôle et sécurité renforcés.</span></li>
-                            <li><i class="fas fa-random"></i><span><strong>Cloud hybride :</strong> Combinaison public + privé. Données sensibles en interne, scalabilité du cloud public.</span></li>
-                            <li><i class="fas fa-infinity"></i><span><strong>Multi-cloud :</strong> Plusieurs fournisseurs simultanément pour éviter le vendor lock-in et optimiser coûts/performances.</span></li>
-                        </ul>
-                    </div>
-
-                    <div class="section-block">
-                        <h4><i class="fas fa-chart-line"></i> Tendances cloud 2024–2025</h4>
-                        <div class="veille-two-col">
-                            <ul class="custom-list">
-                                <li><i class="fas fa-brain"></i><span><strong>IA générative as a Service :</strong> AWS Bedrock, Azure OpenAI Service et Vertex AI proposent des LLM managés sans développer ses propres modèles.</span></li>
-                                <li><i class="fas fa-cube"></i><span><strong>Kubernetes comme standard :</strong> L'orchestration de conteneurs s'impose pour déployer des applications scalables et résilientes.</span></li>
-                                <li><i class="fas fa-bolt"></i><span><strong>Edge Computing :</strong> Traitement au plus proche des données (IoT, latence critique) avec AWS Outposts et Azure Stack Edge.</span></li>
-                                <li><i class="fas fa-code-branch"></i><span><strong>GitOps &amp; DevSecOps :</strong> Intégration de la sécurité dès la phase de développement via des pipelines CI/CD sécurisés.</span></li>
-                            </ul>
-                            <ul class="custom-list">
-                                <li><i class="fas fa-infinity"></i><span><strong>Serverless :</strong> Code exécuté sans gérer l'infrastructure. Facturation à l'exécution, scalabilité automatique.</span></li>
-                                <li><i class="fas fa-database"></i><span><strong>FinOps :</strong> Optimisation des coûts cloud. Fondamental car les factures peuvent exploser sans gouvernance.</span></li>
-                                <li><i class="fas fa-leaf"></i><span><strong>Green Cloud :</strong> AWS, Azure et GCP s'engagent vers la neutralité carbone d'ici 2030–2040.</span></li>
-                                <li><i class="fas fa-shield-alt"></i><span><strong>CSPM :</strong> Cloud Security Posture Management pour détecter les mauvaises configurations en continu.</span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="section-block danger">
-                        <h4><i class="fas fa-exclamation-triangle"></i> Risques spécifiques au cloud</h4>
-                        <ul class="custom-list danger">
-                            <li><i class="fas fa-exclamation-circle"></i><span><strong>Mauvaise configuration :</strong> Bucket S3 ou Blob Storage exposé publiquement par erreur. Cause principale des fuites cloud (CNCF 2024).</span></li>
-                            <li><i class="fas fa-key"></i><span><strong>Clés d'accès exposées :</strong> Des clés API commitées par erreur sur GitHub peuvent être exploitées en quelques minutes par des bots.</span></li>
-                            <li><i class="fas fa-door-open"></i><span><strong>Mouvement latéral inter-cloud :</strong> Une identité compromise permet de pivoter d'un service à l'autre dans l'environnement cloud.</span></li>
-                            <li><i class="fas fa-lock-open"></i><span><strong>Privilege Escalation :</strong> Des rôles IAM trop permissifs permettent à un attaquant d'accéder à l'ensemble du tenant.</span></li>
-                            <li><i class="fas fa-eye-slash"></i><span><strong>Shadow IT cloud :</strong> Services cloud utilisés par des employés hors du périmètre de sécurité de l'entreprise.</span></li>
-                        </ul>
-                    </div>
-
                     <div class="section-block success">
-                        <h4><i class="fas fa-check-circle"></i> Bonnes pratiques de sécurité cloud</h4>
-                        <div class="veille-two-col">
-                            <ul class="custom-list success">
-                                <li><i class="fas fa-lock"></i><span><strong>Chiffrement systématique :</strong> Données au repos (AES-256) et en transit (TLS 1.3) sans exception.</span></li>
-                                <li><i class="fas fa-mobile-alt"></i><span><strong>MFA &amp; Passwordless :</strong> MFA sur tous les comptes, clés FIDO2/passkeys pour les administrateurs.</span></li>
-                                <li><i class="fas fa-user-check"></i><span><strong>Moindre privilège :</strong> Attribuer uniquement les droits nécessaires, réviser régulièrement.</span></li>
-                                <li><i class="fas fa-code"></i><span><strong>Infrastructure as Code :</strong> Gérer toute l'infra via Terraform ou Bicep pour la reproductibilité et l'auditabilité.</span></li>
-                            </ul>
-                            <ul class="custom-list success">
-                                <li><i class="fas fa-eye"></i><span><strong>Monitoring continu :</strong> Activer CloudTrail, Azure Monitor, Cloud Audit Logs. Centraliser dans un SIEM.</span></li>
-                                <li><i class="fas fa-shield-alt"></i><span><strong>CSPM automatisé :</strong> Prisma Cloud, Defender for Cloud pour détecter les dérives de configuration.</span></li>
-                                <li><i class="fas fa-network-wired"></i><span><strong>Segmentation réseau :</strong> VPC/VNet isolés, security groups stricts et Private Endpoints.</span></li>
-                                <li><i class="fas fa-clipboard-check"></i><span><strong>Conformité (SOC2, ISO 27001) :</strong> S'appuyer sur les certifications des hyperscalers et adapter sa posture.</span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="section-block">
-                        <h4><i class="fas fa-rss"></i> Sources de veille utilisées</h4>
-                        <div class="sources-grid">
-                            <div class="source-chip"><i class="fab fa-aws"></i> AWS Blog</div>
-                            <div class="source-chip"><i class="fab fa-microsoft"></i> Azure Updates</div>
-                            <div class="source-chip"><i class="fab fa-google"></i> Google Cloud Blog</div>
-                            <div class="source-chip"><i class="fas fa-globe"></i> Cloud Security Alliance</div>
-                            <div class="source-chip"><i class="fas fa-globe"></i> InfoQ Cloud</div>
-                            <div class="source-chip"><i class="fas fa-globe"></i> CNCF Blog</div>
-                            <div class="source-chip"><i class="fab fa-youtube"></i> TechWorld with Nana</div>
-                            <div class="source-chip"><i class="fab fa-linkedin"></i> LinkedIn Learning</div>
-                        </div>
+                        <h4><i class="fas fa-check-circle"></i> Bonnes pratiques</h4>
+                        <ul class="custom-list">
+                            <li><i class="fas fa-lock"></i> Chiffrement systématique</li>
+                            <li><i class="fas fa-mobile-alt"></i> MFA obligatoire</li>
+                            <li><i class="fas fa-code"></i> Infrastructure as Code</li>
+                            <li><i class="fas fa-eye"></i> Surveillance continue</li>
+                        </ul>
                     </div>
 
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -418,15 +379,23 @@
             <h2><i class="fas fa-graduation-cap"></i> Mon Parcours</h2>
             <div class="header-line"></div>
         </div>
+
         <div class="content-wrapper">
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date"><i class="fas fa-calendar-alt"></i> 2024 – Présent</div>
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i> 2024 - Présent
+                        </div>
                         <h3>BTS SIO option SISR</h3>
-                        <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> CFAI</p>
-                        <p>Formation <strong>Solutions d'Infrastructure, Systèmes et Réseaux</strong> avec spécialisation cybersécurité.</p>
+                        <p class="timeline-location">
+                            <i class="fas fa-map-marker-alt"></i> CFAI
+                        </p>
+                        <p>
+                            Formation <strong>Solutions d'Infrastructure, Systèmes et Réseaux</strong> 
+                            avec spécialisation cybersécurité.
+                        </p>
                         <div class="timeline-tags">
                             <span class="tag"><i class="fas fa-server"></i> Administration Système</span>
                             <span class="tag"><i class="fas fa-network-wired"></i> Réseaux</span>
@@ -434,13 +403,21 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date"><i class="fas fa-calendar-alt"></i> 2024 – Présent</div>
-                        <h3>Alternance – Focal JMLab</h3>
-                        <p class="timeline-location"><i class="fas fa-building"></i> Focal JMLab</p>
-                        <p>Gestion et sécurisation des infrastructures IT dans une entreprise leader de l'acoustique haut de gamme.</p>
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i> 2024 - Présent
+                        </div>
+                        <h3>Alternance - Focal JMLab</h3>
+                        <p class="timeline-location">
+                            <i class="fas fa-building"></i> Focal JMLab
+                        </p>
+                        <p>
+                            Gestion et sécurisation des infrastructures IT dans une entreprise 
+                            leader de l'acoustique haut de gamme.
+                        </p>
                         <div class="timeline-tags">
                             <span class="tag"><i class="fas fa-tools"></i> Infrastructure IT</span>
                             <span class="tag"><i class="fas fa-code"></i> PowerShell</span>
@@ -452,19 +429,22 @@
         </div>
     </section>
 
-    <!-- GRILLE -->
+    <!-- GRILLE DE COMPÉTENCES -->
     <section id="grille" class="page-content">
         <div class="page-header">
-            <h2><i class="fas fa-chart-bar"></i> Grille d'évaluation</h2>
+            <h2><i class="fas fa-chart-bar"></i> Grille de compétences</h2>
             <div class="header-line"></div>
         </div>
+
         <div class="content-wrapper">
-            <div class="cv-card cv-card-single">
-                <div class="cv-icon"><i class="fas fa-file-pdf"></i></div>
-                <h3>Document d'évaluation</h3>
-                <p>Ma grille d'évaluation complète est disponible en ligne au format PDF. Cliquez ci-dessous pour la visualiser directement dans votre navigateur.</p>
-                <a href="grille-evaluation-quentin-chapuis.pdf" target="_blank" class="btn-primary" style="margin-top:var(--spacing-md); display:inline-flex; justify-content:center;">
-                    <i class="fas fa-eye"></i> Visualiser la grille (PDF)
+            <div class="cv-card">
+                <div class="cv-icon">
+                    <i class="fas fa-table"></i>
+                </div>
+                <h3>Tableau de synthèse des réalisations professionnelles</h3>
+                <p>Mon tableau de synthèse BTS SIO – Épreuve E5.</p>
+                <a href="8_-_bts_sio_-_annexe_8-1_-_tableau_de_synthese_-_epreuve_e5_-_bts_sio_final.ods" download class="btn-primary" style="margin-top: var(--spacing-md); display: inline-flex;">
+                    <i class="fas fa-download"></i> Télécharger la grille
                 </a>
             </div>
         </div>
@@ -476,21 +456,33 @@
             <h2><i class="fas fa-code"></i> Mes Réalisations</h2>
             <div class="header-line"></div>
         </div>
+
         <div class="content-wrapper">
             <div class="projects-grid">
-
+                
+                <!-- PROJET 1 - PowerShell + Intune -->
                 <div class="project-card featured">
-                    <div class="project-badge"><i class="fas fa-star"></i> Projet phare</div>
-                    <div class="project-icon"><i class="fab fa-windows"></i></div>
-                    <h3>Blocage du Microsoft Store via PowerShell &amp; Intune</h3>
-                    <div class="project-description"><p>Solution automatisée pour bloquer l'accès au Microsoft Store sur l'ensemble du parc informatique.</p></div>
+                    <div class="project-badge">
+                        <i class="fas fa-star"></i> Projet phare
+                    </div>
+                    <div class="project-icon">
+                        <i class="fab fa-windows"></i>
+                    </div>
+                    <h3>Blocage du Microsoft Store via PowerShell & Intune</h3>
+                    
+                    <div class="project-description">
+                        <p>
+                            Solution automatisée pour bloquer l'accès au Microsoft Store sur l'ensemble du parc informatique.
+                        </p>
+                    </div>
+
                     <div class="project-details">
                         <h4><i class="fas fa-cogs"></i> Solution technique</h4>
                         <ul>
                             <li>Script PowerShell : Modification clé registre Windows</li>
                             <li>Microsoft Intune : Déploiement automatisé</li>
-                            <li>Gestion centralisée via GPO</li>
                         </ul>
+
                         <h4><i class="fas fa-graduation-cap"></i> Compétences</h4>
                         <div class="skills-tags">
                             <span class="skill-tag"><i class="fas fa-terminal"></i> PowerShell</span>
@@ -499,82 +491,75 @@
                             <span class="skill-tag"><i class="fas fa-cogs"></i> Automatisation</span>
                         </div>
                     </div>
-                    <div class="project-impact"><i class="fas fa-check-circle"></i> Déploiement sur 100% du parc</div>
+
+                    <div class="project-impact">
+                        <i class="fas fa-check-circle"></i> Déploiement sur 100% du parc
+                    </div>
                 </div>
 
+                <!-- PROJET 2 - Active Directory -->
                 <div class="project-card">
-                    <div class="project-icon"><i class="fas fa-users-cog"></i></div>
+                    <div class="project-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
                     <h3>Administration Active Directory</h3>
-                    <div class="project-description"><p>Gestion Active Directory : utilisateurs, groupes, GPO et politiques de sécurité.</p></div>
+                    
+                    <div class="project-description">
+                        <p>
+                            Gestion Active Directory : utilisateurs, groupes, GPO et politiques de sécurité.
+                        </p>
+                    </div>
+
                     <div class="project-details">
                         <h4><i class="fas fa-graduation-cap"></i> Compétences</h4>
                         <div class="skills-tags">
                             <span class="skill-tag"><i class="fab fa-windows"></i> Active Directory</span>
                             <span class="skill-tag"><i class="fas fa-sitemap"></i> GPO</span>
-                            <span class="skill-tag"><i class="fas fa-user-shield"></i> Droits &amp; Permissions</span>
+                            <span class="skill-tag"><i class="fas fa-user-shield"></i> Droits & Permissions</span>
                             <span class="skill-tag"><i class="fas fa-server"></i> Windows Server</span>
                         </div>
                     </div>
                 </div>
 
+                <!-- PROJET 3 - Routeur dans un conteneur R&D -->
                 <div class="project-card">
-                    <div class="project-icon"><i class="fas fa-project-diagram"></i></div>
-                    <h3>Configuration de routage Cisco</h3>
-                    <div class="project-description"><p>Configuration routeurs et switches Cisco : VLANs, routage, ACL et sécurité réseau.</p></div>
+                    <div class="project-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Déploiement d'un routeur dans un conteneur pour la R&D</h3>
+
+                    <div class="project-description">
+                        <p>
+                            Suite à une demande des équipes R&D nécessitant un accès Wi-Fi, j'ai mis en place 
+                            un routeur virtualisé au sein d'un conteneur afin de répondre à ce besoin de manière 
+                            flexible et isolée du réseau principal.
+                        </p>
+                    </div>
+
                     <div class="project-details">
+                        <h4><i class="fas fa-cogs"></i> Solution technique</h4>
+                        <ul>
+                            <li>Déploiement d'un conteneur dédié hébergeant les services réseau</li>
+                            <li>Configuration du routage et de l'accès Wi-Fi pour les utilisateurs R&D</li>
+                            <li>Isolation réseau garantissant la sécurité du SI</li>
+                        </ul>
+
                         <h4><i class="fas fa-graduation-cap"></i> Compétences</h4>
                         <div class="skills-tags">
-                            <span class="skill-tag"><i class="fas fa-network-wired"></i> Cisco IOS</span>
-                            <span class="skill-tag"><i class="fas fa-layer-group"></i> VLANs</span>
-                            <span class="skill-tag"><i class="fas fa-route"></i> Routage</span>
-                            <span class="skill-tag"><i class="fas fa-shield-alt"></i> ACL</span>
+                            <span class="skill-tag"><i class="fas fa-box"></i> Conteneurisation</span>
+                            <span class="skill-tag"><i class="fas fa-network-wired"></i> Routage réseau</span>
+                            <span class="skill-tag"><i class="fas fa-wifi"></i> Wi-Fi</span>
+                            <span class="skill-tag"><i class="fas fa-shield-alt"></i> Isolation réseau</span>
                         </div>
+                    </div>
+
+                    <div class="project-impact">
+                        <i class="fas fa-check-circle"></i> Accès Wi-Fi opérationnel pour l'équipe R&D
                     </div>
                 </div>
 
             </div>
 
-            <div class="tech-stack">
-                <h3><i class="fas fa-tools"></i> Technologies et outils maîtrisés</h3>
-                <div class="tech-categories">
-                    <div class="tech-category">
-                        <h4><i class="fas fa-server"></i> Systèmes</h4>
-                        <div class="tech-items">
-                            <span><i class="fab fa-windows"></i> Windows Server</span>
-                            <span><i class="fab fa-linux"></i> Linux</span>
-                            <span><i class="fas fa-terminal"></i> PowerShell</span>
-                            <span><i class="fas fa-terminal"></i> Bash</span>
-                        </div>
-                    </div>
-                    <div class="tech-category">
-                        <h4><i class="fas fa-network-wired"></i> Réseaux</h4>
-                        <div class="tech-items">
-                            <span><i class="fas fa-project-diagram"></i> Cisco</span>
-                            <span><i class="fas fa-layer-group"></i> VLANs</span>
-                            <span><i class="fas fa-route"></i> Routage</span>
-                            <span><i class="fas fa-fire"></i> Pare-feu</span>
-                        </div>
-                    </div>
-                    <div class="tech-category">
-                        <h4><i class="fas fa-cloud"></i> Cloud</h4>
-                        <div class="tech-items">
-                            <span><i class="fab fa-aws"></i> AWS</span>
-                            <span><i class="fab fa-microsoft"></i> Azure</span>
-                            <span><i class="fab fa-google"></i> Google Cloud</span>
-                            <span><i class="fab fa-microsoft"></i> Intune</span>
-                        </div>
-                    </div>
-                    <div class="tech-category">
-                        <h4><i class="fas fa-shield-alt"></i> Sécurité</h4>
-                        <div class="tech-items">
-                            <span><i class="fas fa-bug"></i> Pentesting</span>
-                            <span><i class="fas fa-user-lock"></i> IAM</span>
-                            <span><i class="fas fa-lock"></i> Chiffrement</span>
-                            <span><i class="fas fa-shield-virus"></i> Antivirus</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -583,71 +568,115 @@
 <footer>
     <div class="footer-content">
         <div class="footer-left">
-            <div class="logo"><i class="fas fa-shield-halved"></i> QUENTIN<span>_CHAPUIS</span></div>
-            <p>Étudiant passionné par la cybersécurité et l'administration système</p>
+            <div class="logo">
+                <i class="fas fa-shield-halved"></i>
+                QUENTIN<span>_CHAPUIS</span>
+            </div>
+            <p>Étudiant BTS SIO SISR - Cybersécurité et administration système</p>
         </div>
         <div class="footer-right">
-            <p>&copy; 2026 – Quentin Chapuis | Portfolio BTS SIO SISR</p>
-            <p class="footer-tech"><i class="fas fa-code"></i> Développé avec passion pour la technologie</p>
+            <p>&copy; 2026 - Quentin Chapuis | Portfolio BTS SIO SISR</p>
+            <p class="footer-tech">
+                <i class="fas fa-code"></i> Développé avec passion pour la technologie
+            </p>
         </div>
     </div>
 </footer>
 
 <script>
-function showPage(pageId) {
-    document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active-page'));
-    document.getElementById(pageId).classList.add('active-page');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-    document.getElementById('link-' + pageId).classList.add('active');
-    const navMenu = document.querySelector('.nav-menu');
-    const burger  = document.querySelector('.burger-menu');
-    if (navMenu.classList.contains('active')) {
-        navMenu.classList.remove('active');
-        burger.classList.remove('active');
+    // Navigation entre les pages
+    function showPage(pageId) {
+        const pages = document.querySelectorAll('.page-content');
+        pages.forEach(page => {
+            page.classList.remove('active-page');
+        });
+
+        const targetPage = document.getElementById(pageId);
+        targetPage.classList.add('active-page');
+        
+        // Scroll to top smooth
+        window.scrollTo({top: 0, behavior: 'smooth'});
+
+        const links = document.querySelectorAll('.nav-link');
+        links.forEach(link => link.classList.remove('active'));
+        document.getElementById('link-' + pageId).classList.add('active');
+
+        // Fermer le menu mobile si ouvert
+        const navMenu = document.querySelector('.nav-menu');
+        const burger = document.querySelector('.burger-menu');
+        if (navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            burger.classList.remove('active');
+        }
     }
-}
 
-function toggleMobileMenu() {
-    document.querySelector('.nav-menu').classList.toggle('active');
-    document.querySelector('.burger-menu').classList.toggle('active');
-}
-
-window.addEventListener('scroll', () => {
-    document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
-});
-
-function createParticles() {
-    const container = document.getElementById('particles');
-    for (let i = 0; i < 50; i++) {
-        const p = document.createElement('div');
-        p.className = 'particle';
-        p.style.left = Math.random() * 100 + '%';
-        p.style.top  = Math.random() * 100 + '%';
-        p.style.animationDelay    = Math.random() * 20 + 's';
-        p.style.animationDuration = (Math.random() * 10 + 10) + 's';
-        container.appendChild(p);
+    // Menu burger mobile
+    function toggleMobileMenu() {
+        const navMenu = document.querySelector('.nav-menu');
+        const burger = document.querySelector('.burger-menu');
+        navMenu.classList.toggle('active');
+        burger.classList.toggle('active');
     }
-}
 
-document.addEventListener('DOMContentLoaded', () => {
-    createParticles();
+    // Header transparent au scroll
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // Animation des particules
+    function createParticles() {
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 50;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 20 + 's';
+            particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            particlesContainer.appendChild(particle);
+        }
+    }
+
+    // Animation au chargement
+    document.addEventListener('DOMContentLoaded', () => {
+        createParticles();
+        
+        // Animation de typing
+        const typingText = document.querySelector('.typing-text');
+        if (typingText) {
+            typingText.style.opacity = '1';
+        }
+    });
+
+    // Animation on scroll pour les cards
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity   = '1';
+                entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
             }
         });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    }, observerOptions);
 
-    document.querySelectorAll('.project-card, .veille-card, .timeline-item, .attack-card').forEach(el => {
-        el.style.opacity    = '0';
-        el.style.transform  = 'translateY(30px)';
+    // Observer tous les cards
+    document.querySelectorAll('.skill-card, .project-card, .veille-card, .timeline-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
         el.style.transition = 'all 0.6s ease-out';
         observer.observe(el);
     });
-});
 </script>
 
 </body>
