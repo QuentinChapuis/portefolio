@@ -296,3 +296,152 @@ footer { background: var(--bg-secondary); border-top: 1px solid rgba(59,130,246,
 
 /* Custom list with spans */
 .custom-list li span { flex: 1; }
+
+/* ===== GRILLE DE COMPÉTENCES - TABLEAU ===== */
+.grille-content-wrapper { padding: 0 !important; max-width: 100% !important; }
+
+.grille-scroll-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+}
+
+.grille-table {
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    font-family: 'Inter', sans-serif;
+    background: #12172a;
+    color: var(--text-primary);
+}
+
+/* Titre principal */
+.gr-title td {
+    background: #1a2040;
+    text-align: center;
+    padding: 0.9rem;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid #2a3260;
+    color: #e2e8f0;
+}
+.gr-session {
+    background: var(--accent-primary);
+    color: white;
+    padding: 0.2rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+/* Sous-titre */
+.gr-subtitle td {
+    background: #151b35;
+    text-align: center;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    border-bottom: 1px solid #2a3260;
+}
+
+/* Lignes d'info */
+.gr-info td {
+    background: #12172a;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid #1e2748;
+    color: #c4cde0;
+    font-size: 0.82rem;
+}
+.gr-info strong { color: white; }
+.gr-option-yes { color: #3b82f6; font-weight: 700; }
+.gr-link { color: var(--accent-primary); text-decoration: none; }
+.gr-link:hover { text-decoration: underline; }
+.gr-blank { color: #4a5568; }
+
+/* En-tête compétences */
+.gr-head th {
+    background: #1e2748;
+    padding: 0.7rem 0.5rem;
+    border: 1px solid #2a3260;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    vertical-align: middle;
+    color: #93c5fd;
+}
+.gr-th-label { width: 28%; text-align: left !important; padding-left: 0.8rem !important; }
+.gr-th-periode { width: 10%; }
+.gr-th-comp { width: calc(62% / 6); }
+.gr-th-sub { display: block; font-weight: 400; color: #94a3b8; font-size: 0.72rem; margin-top: 0.2rem; }
+
+/* Sous-en-tête détail compétences */
+.gr-subhead td {
+    background: #161d38;
+    padding: 0.5rem;
+    border: 1px solid #2a3260;
+    font-size: 0.72rem;
+    color: #7a90b8;
+    line-height: 1.5;
+    vertical-align: top;
+    text-align: left;
+}
+.gr-td-sub { text-align: left !important; }
+
+/* Sections */
+.gr-section td {
+    background: linear-gradient(90deg, #1e3a5f 0%, #1a2f4e 100%);
+    padding: 0.55rem 0.8rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #93c5fd;
+    letter-spacing: 0.03em;
+    border-top: 2px solid #2563eb;
+    border-bottom: 1px solid #2a3260;
+}
+
+/* Lignes de données */
+.gr-row td {
+    border: 1px solid #1e2748;
+    padding: 0.5rem;
+    vertical-align: middle;
+}
+.gr-row:nth-child(even) td { background: #131929; }
+.gr-row:nth-child(odd) td { background: #0f1521; }
+.gr-row:hover td { background: #1a2542 !important; }
+
+.gr-td-label {
+    text-align: left;
+    padding-left: 0.8rem !important;
+    font-size: 0.8rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+.gr-td-periode {
+    text-align: center;
+    font-size: 0.72rem;
+    color: #7a90b8;
+    font-style: italic;
+}
+.gr-td-comp {
+    text-align: center;
+    font-size: 0.9rem;
+}
+.gr-td-comp.gr-check {
+    background: rgba(106, 168, 79, 0.15) !important;
+    color: #6aa84f;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.gr-row:hover .gr-td-comp.gr-check { background: rgba(106, 168, 79, 0.25) !important; }
+
+/* Ligne Portfolio */
+.gr-portfolio td {
+    background: #1a2040 !important;
+    border-top: 2px solid #2563eb;
+    font-weight: 600;
+}
